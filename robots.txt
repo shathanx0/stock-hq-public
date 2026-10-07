@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shathan-research.pages.dev/sitemap.xml
