@@ -1,65 +1,63 @@
 // Public morning brief: general market only. No portfolio, account or holdings content.
 // Written alongside the private brief.js; build_public.py publishes it as brief.js on the public site and leak-checks it first.
 window.HQ_BRIEF = {
-  date: "2026-10-07",
-  edition: "Wednesday 7 October 2026 · Morning edition",
-  headline: "Google signs a 20-year nuclear power deal with Constellation and the stock jumps 12%, while Micron slips on a Taiwan strike threat",
-  dek: "Yesterday's Bloomberg report turned into a signed deal: Google will buy 890 MW of new nuclear output from upgrades at 11 Constellation reactors under a 20-year contract, plus 2,700 MW under a separate 15-year supply deal. Constellation closed up 12.2% at $300.40 and the whole nuclear group rallied. The S&P 500 and Nasdaq both closed at records. London is about 0.5% lower this morning as bond yields rise again and metals fall, and Micron is down about 2% before the US open after workers at its Taiwan plant voted to authorise a strike.",
+  date: "2026-10-08",
+  edition: "Thursday 8 October 2026 · Morning edition",
+  headline: "Samsung and TSMC both post record quarters, but oil jumps 5% on tanker attacks and bond yields keep climbing",
+  dek: "The two biggest chip factories in the world confirmed the AI boom overnight: Samsung guided to a record ₩107.4 trillion (about $80B) of quarterly operating profit and TSMC reported record Q3 revenue of about $46.7B, both above forecasts. Markets are focused elsewhere, though. Brent oil is up about 5% to around $104–105 after more attacks on tankers near the Strait of Hormuz, the UK 30-year gilt yield has hit its highest since 1998, and US futures are lower. Wall Street slipped from its records on Wednesday after the Fed minutes showed most officials expect one more rate rise this year.",
   market: [
-    { k: "S&P 500", v: "7,819", d: "+0.6% Tue · record close, first above 7,800" },
-    { k: "Nasdaq", v: "27,600", d: "+0.5% Tue · record close" },
-    { k: "FTSE 100", v: "~10,489", d: "about −0.5% Wed morning · miners and utilities lower" },
-    { k: "Gold", v: "~$4,135/oz", d: "−0.7% Wed · stronger dollar, higher yields" },
-    { k: "US 10-yr yield", v: "~5.32%", d: "Wed · up from 5.27% Tue; Fed minutes 7pm UK" }
+    { k: "S&P 500", v: "7,802", d: "−0.2% Wed · off Tuesday's record; futures about −0.4% Thu" },
+    { k: "Nasdaq", v: "27,539", d: "−0.2% Wed" },
+    { k: "FTSE 100", v: "~10,418", d: "about −0.4% Thu midday · after −0.8% Wed" },
+    { k: "Gold", v: "~$4,117/oz", d: "about flat Thu · down ~6% over the past month" },
+    { k: "Brent oil", v: "~$104–105", d: "about +5% Thu · tanker attacks near Hormuz" }
   ],
   sections: [
     { title: "The big picture", paras: [
-      "Wall Street set more records on Tuesday. The S&P 500 rose 0.58% to 7,818.93, its fourth gain in a row and its first close above 7,800, and the Nasdaq added 0.45% to 27,599.79. Lower oil and a dip in Treasury yields helped, and chip stocks led again: Marvell rose 5.8% after its investor day and AMD gained nearly 3%. Constellation's 12% jump on the Google deal lifted the whole nuclear group. Reuters reports that Australian uranium miners had their best session in weeks overnight.",
-      "This morning the mood is cooler. The FTSE 100 is down about 0.5% and the DAX about 0.8%. The US 10-year yield is back up at about 5.32%, near its highest since 2002, and gold (about $4,135), silver and copper are all lower. Brent oil is up about 0.7% at around $101. Tonight at 7pm UK the Fed publishes minutes from its September meeting. Traders currently price roughly an 80% chance that the Fed holds rates at its 27–28 October meeting, helped by Friday's soft jobs report."
+      "Wall Street stepped back from its records on Wednesday. The S&P 500 fell 0.22% to 7,801.77, the Nasdaq slipped 0.22% to 27,538.69 and the Dow lost 0.66%. The US 10-year Treasury yield rose to about 5.36%, its highest since 2002, and the minutes of the Fed's September meeting (when it raised rates to 3.75–4.00%) said most officials think another rise will likely be appropriate by the end of the year. Rising yields hit the most speculative corners hardest: quantum computing and space stocks fell 4–5%.",
+      "This morning oil is the story. Brent is up about 5% to around $104–105 after attacks on tankers near the Strait of Hormuz reached their highest level in weeks. In the UK the 30-year gilt yield reached about 6.04%, the highest since 1998, and markets price a better than 90% chance that the Bank of England raises rates on 5 November. The FTSE 100 is down about 0.4% with miners leading the falls, and US futures point lower. The chip news is good: Samsung's record profit guidance beat forecasts, and TSMC's Q3 revenue of NT$1.49 trillion (about $46.7B, up 50% on a year ago) came in above the top of its own guidance."
     ] },
     { title: "Stocks in the news", items: [
-      { t: "CEG", h: "Google signs a 20-year nuclear power deal; the shares jumped 12.2% to $300.40.", b: "Google will buy 890 MW of new capacity that Constellation will create by upgrading 11 existing reactors in Illinois, Pennsylvania and New Jersey, which Constellation says means more than $4.3B of investment. A separate 15-year agreement covers another 2,700 MW from its PJM fleet, and Constellation also picked Google Cloud and Gemini under a five-year technology deal. It's the second Big Tech nuclear contract in a week, after Amazon's 690 MW. The new power arrives over several years, and the stock is up about 13.5% in a week, so a lot of the good news is already in the price. Results are due 6 November." },
-      { t: "MU", h: "Down about 2% before the open on a Taiwan strike vote and softer memory prices.", b: "Workers at Micron's Taoyuan plant in Taiwan voted with 99% support to authorise a strike over bonuses and profit-sharing, after mediation failed in September (Reuters, TipRanks). NAND flash prices have also softened this week. Separately, Micron agreed a $600M patent settlement and cross-licence with Netlist, paid at $30M a quarter for five years, which is small next to Micron's revenue. Samsung's preliminary Q3 numbers land early Thursday UK time and are the next big read for memory." },
-      { t: "AMD", h: "Rose 2.8% to a 52-week high of about $649 after Lisa Su said supply will rise substantially in 2027.", b: "Su said demand is still running ahead of capacity. Citi raised its target to $800 from $575 and Mizuho to $705 from $580 (TipRanks). On her Asia tour, Su told Reuters on Wednesday that AMD is still exploring memory and foundry partnerships with Samsung. Results are due 3 November." }
+      { t: "TSM", h: "TSMC reported record Q3 revenue of NT$1.49 trillion (~$46.7B), up 50% on a year ago.", b: "That beat the LSEG estimate of NT$1.46 trillion and the top of TSMC's own $44.6–45.8B guidance, and September sales alone were up 54.6%. Demand for AI processors from Nvidia, AMD and others is still running ahead of expectations. Full results, margins and the Q4 outlook come on 15 October." },
+      { t: "BULL", h: "Webull fell about 20% on Wednesday after a House committee flagged national security concerns.", b: "A congressional panel's assessment said the broker's ties to the Chinese government create a national security risk (CNBC). It was the biggest large drop on a down day for US stocks." },
+      { t: "STZ", h: "Constellation Brands beat forecasts but swung between losses and gains.", b: "The beer maker earned $3.74 a share on $2.63B of revenue against expectations of $3.56 on $2.54B. The shares fell about 5% before the open, then traded about 2% higher by midday, a sign of how unsure investors are about beer demand." },
+      { t: "APLD", h: "Applied Digital's revenue rose 322% to $341.9M as its AI data-centre campus came online.", b: "It reported fiscal Q1 adjusted EBITDA of $64.4M and said its Polaris Forge 1 campus reached 250 MW of fully operational IT load on 1 October across two buildings." }
     ] },
-    { title: "Deals and catalysts worth researching", intro: "Deals with concrete numbers. None of these guarantees a profit: a big deal is often priced in within hours, and the payoff can take years.", items: [
-      { t: "CEG", h: "Google–Constellation: 890 MW for 20 years plus 2,700 MW for 15 years (6 Oct)", b: "Described by the WSJ as the largest reactor 'uprate' deal between a nuclear operator and a tech company. Vistra rose about 8% and Talen about 7% in sympathy. Constellation added about $33 a share in one day, so the market priced the deal in immediately." },
-      { t: "MRVL", h: "Marvell targets $70–90B of revenue by fiscal 2031 (6 Oct investor day)", b: "It raised its fiscal 2028 outlook to $20B, above the roughly $18.2B analysts expected, and its fiscal 2029 custom-chip target to more than $12B. The shares rose about 10% early and closed up 5.8%. It's a sign of how much AI spending chip designers expect." },
-      { t: "BWXT", h: "BWXT's BANR microreactor picked for a Canadian transportable nuclear plant (5 Oct), plus a $189M naval fuel contract (1 Oct)", b: "BWXT rose 7.6% on Tuesday in the nuclear rally, but Truist cut its target to $182 from $202 after the company's investor day." }
+    { title: "Deals and catalysts worth researching", intro: "Deals and results with concrete numbers. None of these guarantees a profit: big news is often priced in within hours, and the payoff can take years.", items: [
+      { t: "Samsung", h: "Samsung: record ₩107.4 trillion (~$80B) Q3 operating profit guidance, up about 783% (8 Oct)", b: "Its fourth record quarter in a row, on revenue of about ₩195 trillion, beating the LSEG SmartEstimate of ₩106.1 trillion. Memory makers such as Micron, SanDisk and SK Hynix still traded lower before the US open, which shows how much was already expected. The division breakdown comes on 29 October." },
+      { t: "IONQ", h: "IonQ: DARPA Stage C agreement worth up to $300M, through 2029 (7 Oct)", b: "DARPA will independently test IonQ's quantum systems against its roadmap. It's a technical validation more than a sales contract, and payments depend on future funding. The shares had fallen 4.5% during the day on rising yields and gained about 1% after hours." },
+      { t: "RKLB", h: "NASA weighs bulk rocket purchases for a ~$30B moon-base plan (Bloomberg, 6 Oct)", b: "NASA's moon-base programme manager said the first bulk buys could be announced soon, possibly across four or five rocket types. Space stocks rose about 4% on Tuesday and gave it back on Wednesday. Nothing is signed yet." }
     ] }
   ],
   calendar: [
-    { d: "Wed 7 Oct", e: "Fed minutes from the September meeting, 7pm UK" },
-    { d: "Thu 8 Oct", e: "Samsung preliminary Q3 results (around 1am UK) · ECB meeting accounts · PepsiCo results", t: "MU" },
+    { d: "Thu 8 Oct", e: "US weekly jobless claims, 1:30pm UK · ECB meeting accounts · PepsiCo results (out, beat estimates)" },
     { d: "Fri 9 Oct", e: "US consumer sentiment (prelim. Oct) · Delta Air Lines results" },
     { d: "Mon 12 Oct", e: "US Columbus Day: stocks open, bond market closed" },
     { d: "Tue 13 Oct", e: "Q3 bank earnings start: JPMorgan, Goldman Sachs, Citi, Wells Fargo, BlackRock, J&J" },
     { d: "Wed 14 Oct", e: "US CPI inflation (Sept), 1:30pm UK · Bank of America, Morgan Stanley" },
-    { d: "Thu 15 Oct", e: "TSMC Q3 results, the key read for AI chip demand" },
-    { d: "Later", e: "Fed decision 27–28 Oct · UK Budget 28 Oct · AMD 3 Nov · Bank of England 5 Nov · Constellation 6 Nov" }
+    { d: "Thu 15 Oct", e: "TSMC Q3 results and outlook, the key read for AI chip demand · US PPI (Sept)" },
+    { d: "Later", e: "Fed decision 27–28 Oct · UK Budget 28 Oct · Samsung full Q3 29 Oct · AMD 3 Nov · Bank of England 5 Nov" }
   ],
-  bottomLine: "Constellation's Google deal is the biggest story for the nuclear-power trade, but the stock rose 12% in a day, so the market has already reacted. For chip stocks, tonight's Fed minutes and Samsung's results in the early hours of Thursday matter most, especially for memory makers like Micron.",
+  bottomLine: "Samsung and TSMC have confirmed that AI chip demand is still beating forecasts, but today's market is being driven by oil and bond yields. With the US 10-year near 5.4% and the UK 30-year above 6%, next week's US inflation figures (14 Oct) matter more than usual.",
   sources: [
-    ["Constellation: Google and Constellation announce 890 MW nuclear agreement (6 Oct)", "https://www.constellationenergy.com/news/2026/10/google-and-constellation-announce-landmark-agreement-to-bring-890-mw-of-new-nuclear-capacity-to-pjm-grid.html"],
-    ["Axios: Google and Constellation sign latest nuclear deal", "https://www.axios.com/2026/10/06/google-constellation-nuclear-energy"],
-    ["WSJ: Google and Constellation strike a sweeping nuclear-power deal", "https://www.wsj.com/business/energy-oil/google-and-constellation-energy-strike-a-sweeping-nuclear-power-deal-4287b372"],
-    ["Yahoo Finance: Constellation soars 12%; Vistra and Talen climb", "https://finance.yahoo.com/energy/articles/constellation-energy-soars-12-google-140600039.html"],
-    ["Upstox: Constellation closes at $300.40", "https://upstox.com/news/market-news/us-stocks/constellation-energy-shares-jump-15-on-nasdaq-after-long-term-890-mw-nuclear-power-deal-with-google/article-201392/"],
-    ["Video: Bloomberg, Constellation surges 12% on Google nuclear deal (Closing Bell; not watched, chosen by title)", "https://www.youtube.com/watch?v=iPkKBgquLoM"],
-    ["Reuters: Australian uranium miners rally after Google–Constellation deal", "https://www.reuters.com/business/energy/australian-uranium-miners-rally-after-googles-power-deal-with-constellation-2026-10-07/"],
-    ["CNBC: Stock market news for 6 Oct (record closes)", "https://www.cnbc.com/2026/10/06/stock-market-today-live-updates.html"],
-    ["CNBC: Treasury yields slide as surge to multiyear highs cools (6 Oct)", "https://www.cnbc.com/2026/10/06/treasury-yields-fed-fomc-minutes.html"],
-    ["Yahoo Finance UK: FTSE 100 falls as US Treasury yields rise and miners decline (7 Oct)", "https://uk.finance.yahoo.com/news/ftse-100-falls-us-treasury-085534155.html"],
+    ["Samsung Newsroom: Earnings guidance for Q3 2026", "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026"],
+    ["The Next Web: Samsung expects record $80bn quarterly profit", "https://thenextweb.com/news/samsung-q3-2026-record-profit-ai-memory"],
+    ["CNBC: Samsung forecasts record third-quarter profit", "https://www.cnbc.com/2026/10/08/samsung-q3-earnings.html"],
+    ["TSMC Form 6-K: September 2026 revenue", "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000680/tsm-revenue20261008.htm"],
+    ["Global Banking & Finance: TSMC Q3 revenue surges 50%, beats forecast", "https://www.globalbankingandfinance.com/tsmcs-third-quarter-revenue-surges-50-y-y-beating-market/"],
+    ["TipRanks: Why are Micron, SanDisk and SK Hynix falling today, 8 Oct", "https://www.tipranks.com/news/why-are-micron-sandisk-and-sk-hynix-stocks-falling-today-october-8"],
+    ["Yahoo Finance: Stock market today, 7 Oct (records end, bond jitters)", "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html"],
+    ["Yahoo Finance: Stock market today, 8 Oct (futures fall as oil rises)", "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-8-dow-sp-500-nasdaq-080537884.html"],
+    ["Investing.com: Most Fed members backed future rate hike, September minutes show", "https://investing.com/news/economy/most-fed-members-backed-future-rate-hike-fed-september-minutes-show-3196364"],
+    ["Share Talk: FTSE 100 falls 0.8% as bond rout and $100 oil hit markets (7 Oct)", "https://www.share-talk.com/ftse-100-falls-0-8-as-bond-rout-and-100-oil-hit-markets/"],
+    ["Investing.com: FTSE 100 slips as US bond yields climb; BoE November hike odds", "https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-slip-as-us-bond-yields-climb-miners-drag-4935692"],
+    ["Sunday Guardian: UK stocks fall as oil tops $104 and gilt yields rise (8 Oct)", "https://sundayguardianlive.com/business/why-is-uk-stock-market-down-today-ftse-100-ftse-250-and-ftse-all-share-fall-as-oil-tops-104-and-gilt-yields-rise-what-investors-should-know-301306/"],
     ["Trading Economics: gold", "https://tradingeconomics.com/commodity/gold"],
-    ["TipRanks: Micron, SanDisk and SK Hynix extend losses premarket (7 Oct)", "https://www.tipranks.com/news/micron-sandisk-and-sk-hynix-stocks-extend-losses-in-premarket-today-whats-behind-the-sell-off"],
-    ["Reuters: Micron's Taoyuan union secures authorisation to strike", "https://www.reuters.com/business/world-at-work/microns-taoyuan-union-taiwan-secures-authorisation-strike-2026-10-07/"],
-    ["Invezz: Micron to pay Netlist $30M a quarter for 5 years", "https://invezz.com/news/2026/10/06/netlist-stock-why-micron-will-pay-nlst-30m-a-quarter-for-5-years/"],
-    ["TipRanks: Nvidia and AMD hit 52-week highs; what drove the rally", "https://www.tipranks.com/news/nvidia-and-amd-stocks-what-drove-the-rally-and-which-stock-has-more-upside"],
-    ["Reuters: AMD CEO says it continues to explore foundry partnership with Samsung", "https://www.reuters.com/world/asia-pacific/amd-ceo-says-continues-explore-foundry-partnership-with-samsung-electronics-2026-10-07/"],
-    ["Investing.com: Marvell rallies after ambitious investor day targets", "https://www.investing.com/news/stock-market-news/marvell-technology-stock-rallies-following-ambitious-investor-day-targets-4934767"],
-    ["Yahoo Finance: Marvell targets up to $90B revenue by 2031", "https://finance.yahoo.com/technology/ai/articles/marvell-technology-targets-90b-revenue-200205162.html"],
-    ["Business Wire: BWXT's BANR microreactor chosen for Canadian project (5 Oct)", "https://www.businesswire.com/news/home/20261005162770/en/BWXT%E2%80%99s-BANR-Microreactor-Chosen-for-Canadian-Transportable-Nuclear-Power-Plant-Project/"],
-    ["TipRanks/TheFly: BWXT target cut to $182 at Truist", "https://www.tipranks.com/news/the-fly/bwx-technologies-price-target-lowered-to-182-from-202-at-truist-thefly-news"],
-    ["Motley Fool: Samsung may report its first 100 trillion won quarter; what it means for Micron", "https://www.fool.com/investing/2026/10/05/samsung-may-report-its-first-100-trillion-won-quarter-micron-stock-has-more-to-lose-than-to-gain/"]
+    ["CNBC: Stocks making the biggest moves midday, 7 Oct (Webull, Constellation Brands)", "https://www.cnbc.com/2026/10/07/stocks-making-the-biggest-moves-midday-gs-bull-ws-mu.html"],
+    ["CNBC: Stocks making the biggest moves premarket, 7 Oct", "https://www.cnbc.com/2026/10/07/stocks-making-the-biggest-moves-premarket-stz-flut-neog.html"],
+    ["GlobeNewswire: Applied Digital reports fiscal Q1 2027 results", "https://www.globenewswire.com/news-release/2026/10/07/3376854/0/en/applied-digital-reports-fiscal-first-quarter-2027-results.html"],
+    ["The Quantum Insider: IonQ advances to Stage C of DARPA QBI", "https://thequantuminsider.com/2026/10/08/ionq-advances-to-final-stage-of-darpa-quantum-benchmarking-initiative/"],
+    ["TipRanks: Why did quantum computing stocks plunge Wednesday?", "https://www.tipranks.com/news/why-did-quantum-computing-stocks-ionq-qbts-rgti-and-qubt-plunge-wednesday"],
+    ["Benzinga: Rocket Lab stock pulls back after NASA bulk-launch report", "https://www.benzinga.com/trading-ideas/movers/26/10/62221444/rocket-lab-stock-pulls-back-whats-happening"]
   ]
 };
