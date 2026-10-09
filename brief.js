@@ -1,63 +1,57 @@
 // Public morning brief: general market only. No portfolio, account or holdings content.
 // Written alongside the private brief.js; build_public.py publishes it as brief.js on the public site and leak-checks it first.
 window.HQ_BRIEF = {
-  date: "2026-10-08",
-  edition: "Thursday 8 October 2026 · Morning edition",
-  headline: "Samsung and TSMC both post record quarters, but oil jumps 5% on tanker attacks and bond yields keep climbing",
-  dek: "The two biggest chip factories in the world confirmed the AI boom overnight: Samsung guided to a record ₩107.4 trillion (about $80B) of quarterly operating profit and TSMC reported record Q3 revenue of about $46.7B, both above forecasts. Markets are focused elsewhere, though. Brent oil is up about 5% to around $104–105 after more attacks on tankers near the Strait of Hormuz, the UK 30-year gilt yield has hit its highest since 1998, and US futures are lower. Wall Street slipped from its records on Wednesday after the Fed minutes showed most officials expect one more rate rise this year.",
+  date: "2026-10-09",
+  edition: "Friday 9 October 2026 · Morning edition",
+  headline: "A report that OpenAI earns less than thought knocks chip stocks; SpaceX's $8B spectrum buy shakes up telecoms",
+  dek: "The Nasdaq fell 1.25% on Thursday and the Philadelphia chip index about 3.4% after the Financial Times reported OpenAI's annualised revenue is about $50 billion, not the roughly $70 billion investors had assumed. Chip stocks are bouncing before Friday's open, with Nasdaq futures up about 0.8%. Oil eased about 1% to around $103 after President Trump said talks with Iran were productive and no attack was planned before the US midterms. SpaceX agreed to buy an $8 billion block of airwaves, sending phone carriers on both sides of the Atlantic sharply lower and tower owners higher. Delta cut its 2026 profit forecast on fuel costs.",
   market: [
-    { k: "S&P 500", v: "7,802", d: "−0.2% Wed · off Tuesday's record; futures about −0.4% Thu" },
-    { k: "Nasdaq", v: "27,539", d: "−0.2% Wed" },
-    { k: "FTSE 100", v: "~10,418", d: "about −0.4% Thu midday · after −0.8% Wed" },
-    { k: "Gold", v: "~$4,117/oz", d: "about flat Thu · down ~6% over the past month" },
-    { k: "Brent oil", v: "~$104–105", d: "about +5% Thu · tanker attacks near Hormuz" }
+    { k: "S&P 500", v: "7,765", d: "−0.47% Thu · second daily fall; futures about +0.3% Fri" },
+    { k: "Nasdaq", v: "27,193", d: "−1.25% Thu · chip index about −3.4%" },
+    { k: "FTSE 100", v: "~10,440", d: "−0.2% Thu · lowest in over three months; energy at a record" },
+    { k: "Gold", v: "~$4,190/oz", d: "about +1.3% Fri morning · after +0.4% Thu" },
+    { k: "Brent oil", v: "~$103", d: "about −1% Fri · after +4.5% Thu; still up on the week" }
   ],
   sections: [
     { title: "The big picture", paras: [
-      "Wall Street stepped back from its records on Wednesday. The S&P 500 fell 0.22% to 7,801.77, the Nasdaq slipped 0.22% to 27,538.69 and the Dow lost 0.66%. The US 10-year Treasury yield rose to about 5.36%, its highest since 2002, and the minutes of the Fed's September meeting (when it raised rates to 3.75–4.00%) said most officials think another rise will likely be appropriate by the end of the year. Rising yields hit the most speculative corners hardest: quantum computing and space stocks fell 4–5%.",
-      "This morning oil is the story. Brent is up about 5% to around $104–105 after attacks on tankers near the Strait of Hormuz reached their highest level in weeks. In the UK the 30-year gilt yield reached about 6.04%, the highest since 1998, and markets price a better than 90% chance that the Bank of England raises rates on 5 November. The FTSE 100 is down about 0.4% with miners leading the falls, and US futures point lower. The chip news is good: Samsung's record profit guidance beat forecasts, and TSMC's Q3 revenue of NT$1.49 trillion (about $46.7B, up 50% on a year ago) came in above the top of its own guidance."
+      "Thursday was about two things: how much money AI actually makes, and oil. The Financial Times reported that OpenAI's annualised revenue was about $50 billion at the end of September, around $20 billion below the figure investors had been using. The gap comes mostly from how revenue sold through cloud partners is counted, and Bloomberg separately reported OpenAI expects to reach $70 billion or more by the end of 2026, but it was enough to rattle a market that has leaned heavily on AI spending. Nvidia fell 2.9%, AMD 3.9%, Micron 4.8% and Oracle more than 5%. The S&P 500 lost 0.47% to 7,765.36 and the Nasdaq 1.25% to 27,193.34, while the Dow edged up 0.1%.",
+      "Oil swung hard. Brent jumped about 4.5% to above $104 on more attacks on shipping near the Strait of Hormuz and a hurricane disrupting US Gulf production, then eased after President Trump said there would be no attack on Iran before the 3 November midterms. That helped the US 10-year Treasury yield slip to about 5.23%. In London the picture was harsher: the 10-year gilt yield touched 5.53%, a 19-year high, and the 20- and 30-year yields both passed 6%. The FTSE 100 fell 0.2% to its lowest in more than three months, though energy shares hit a record. US jobless claims fell to 197,000, another sign the jobs market is holding up."
     ] },
     { title: "Stocks in the news", items: [
-      { t: "TSM", h: "TSMC reported record Q3 revenue of NT$1.49 trillion (~$46.7B), up 50% on a year ago.", b: "That beat the LSEG estimate of NT$1.46 trillion and the top of TSMC's own $44.6–45.8B guidance, and September sales alone were up 54.6%. Demand for AI processors from Nvidia, AMD and others is still running ahead of expectations. Full results, margins and the Q4 outlook come on 15 October." },
-      { t: "BULL", h: "Webull fell about 20% on Wednesday after a House committee flagged national security concerns.", b: "A congressional panel's assessment said the broker's ties to the Chinese government create a national security risk (CNBC). It was the biggest large drop on a down day for US stocks." },
-      { t: "STZ", h: "Constellation Brands beat forecasts but swung between losses and gains.", b: "The beer maker earned $3.74 a share on $2.63B of revenue against expectations of $3.56 on $2.54B. The shares fell about 5% before the open, then traded about 2% higher by midday, a sign of how unsure investors are about beer demand." },
-      { t: "APLD", h: "Applied Digital's revenue rose 322% to $341.9M as its AI data-centre campus came online.", b: "It reported fiscal Q1 adjusted EBITDA of $64.4M and said its Polaris Forge 1 campus reached 250 MW of fully operational IT load on 1 October across two buildings." }
+      { t: "ORCL", h: "Oracle fell more than 5% after the OpenAI revenue report.", b: "Oracle's huge cloud backlog depends heavily on OpenAI, so any sign that OpenAI's income is smaller than assumed hits it directly. OpenAI is valued at about $1.4 trillion, roughly 28 times the reported $50 billion run-rate, and is raising another $30 billion." },
+      { t: "DAL", h: "Delta cut its 2026 profit forecast to $5.10–5.60 a share from $6.50–7.50 as fuel costs bite.", b: "Third-quarter revenue rose 21% to $20.2 billion, but adjusted earnings of $1.72 a share were slightly below forecasts. It also cut its free cash flow outlook to $2.5 billion from up to $4 billion and guided to $1.15–1.65 a share for the fourth quarter. The CEO said demand is still strong; the problem is the price of jet fuel." },
+      { t: "TMUS", h: "US and European phone carriers fell 2–7% after SpaceX bought spectrum for its satellite-to-phone service.", b: "T-Mobile, Verizon and AT&T fell 5.5–7.4% before the US open, Deutsche Telekom about 6.5% and Vodafone about 4%. Tower owners went the other way: American Tower, Crown Castle and SBA rose 6.7–8.3%, on the idea that SpaceX could become another paying tenant." },
+      { t: "TSCO.L", h: "Tesco rose 5.2% after raising its profit forecast to £3.15–3.3 billion.", b: "It was one of the best performers in a weak London market on Thursday, alongside Imperial Brands (+5.1%), which announced a £1.5 billion buyback." }
     ] },
     { title: "Deals and catalysts worth researching", intro: "Deals and results with concrete numbers. None of these guarantees a profit: big news is often priced in within hours, and the payoff can take years.", items: [
-      { t: "Samsung", h: "Samsung: record ₩107.4 trillion (~$80B) Q3 operating profit guidance, up about 783% (8 Oct)", b: "Its fourth record quarter in a row, on revenue of about ₩195 trillion, beating the LSEG SmartEstimate of ₩106.1 trillion. Memory makers such as Micron, SanDisk and SK Hynix still traded lower before the US open, which shows how much was already expected. The division breakdown comes on 29 October." },
-      { t: "IONQ", h: "IonQ: DARPA Stage C agreement worth up to $300M, through 2029 (7 Oct)", b: "DARPA will independently test IonQ's quantum systems against its roadmap. It's a technical validation more than a sales contract, and payments depend on future funding. The shares had fallen 4.5% during the day on rising yields and gained about 1% after hours." },
-      { t: "RKLB", h: "NASA weighs bulk rocket purchases for a ~$30B moon-base plan (Bloomberg, 6 Oct)", b: "NASA's moon-base programme manager said the first bulk buys could be announced soon, possibly across four or five rocket types. Space stocks rose about 4% on Tuesday and gave it back on Wednesday. Nothing is signed yet." }
+      { t: "SpaceX", h: "SpaceX: about $8 billion cash for Grain Management's nationwide 800 MHz spectrum (9 Oct)", b: "Low-band airwaves travel through walls and trees, which matters for beaming signal from satellites straight to phones. The deal needs regulatory approval. Morgan Stanley said it shows SpaceX will be a more aggressive buyer of spectrum, but expects any threat to carriers to build slowly, starting in rural areas." },
+      { t: "Tower REITs", h: "Tower owners up 6.7–8.3% on the same deal (9 Oct)", b: "The bull case is that a SpaceX ground network would need towers. The bear case is that buying spectrum is not a commitment to build anything, so the rally rests on an option, not a signed lease." },
+      { t: "IMB.L", h: "Imperial Brands: £1.5 billion share buyback, trading on track with guidance (8 Oct)", b: "Buybacks return cash by shrinking the share count. The shares rose 5.1% on the day." }
     ] }
   ],
   calendar: [
-    { d: "Thu 8 Oct", e: "US weekly jobless claims, 1:30pm UK · ECB meeting accounts · PepsiCo results (out, beat estimates)" },
-    { d: "Fri 9 Oct", e: "US consumer sentiment (prelim. Oct) · Delta Air Lines results" },
+    { d: "Fri 9 Oct", e: "US consumer sentiment (prelim. Oct), 3pm UK · Delta results (out: guidance cut)" },
     { d: "Mon 12 Oct", e: "US Columbus Day: stocks open, bond market closed" },
     { d: "Tue 13 Oct", e: "Q3 bank earnings start: JPMorgan, Goldman Sachs, Citi, Wells Fargo, BlackRock, J&J" },
     { d: "Wed 14 Oct", e: "US CPI inflation (Sept), 1:30pm UK · Bank of America, Morgan Stanley" },
     { d: "Thu 15 Oct", e: "TSMC Q3 results and outlook, the key read for AI chip demand · US PPI (Sept)" },
-    { d: "Later", e: "Fed decision 27–28 Oct · UK Budget 28 Oct · Samsung full Q3 29 Oct · AMD 3 Nov · Bank of England 5 Nov" }
+    { d: "Later", e: "Fed decision 27–28 Oct · UK Budget 28 Oct · Samsung full Q3 29 Oct · US midterms 3 Nov · Bank of England 5 Nov" }
   ],
-  bottomLine: "Samsung and TSMC have confirmed that AI chip demand is still beating forecasts, but today's market is being driven by oil and bond yields. With the US 10-year near 5.4% and the UK 30-year above 6%, next week's US inflation figures (14 Oct) matter more than usual.",
+  bottomLine: "The AI trade got its first real wobble in a while, not from weak chip demand but from doubts about how much the biggest AI customer earns. With bond yields near multi-decade highs in the US and UK, next week's US inflation figures (14 Oct) and TSMC's outlook (15 Oct) are the two things to watch.",
   sources: [
-    ["Samsung Newsroom: Earnings guidance for Q3 2026", "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026"],
-    ["The Next Web: Samsung expects record $80bn quarterly profit", "https://thenextweb.com/news/samsung-q3-2026-record-profit-ai-memory"],
-    ["CNBC: Samsung forecasts record third-quarter profit", "https://www.cnbc.com/2026/10/08/samsung-q3-earnings.html"],
-    ["TSMC Form 6-K: September 2026 revenue", "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000680/tsm-revenue20261008.htm"],
-    ["Global Banking & Finance: TSMC Q3 revenue surges 50%, beats forecast", "https://www.globalbankingandfinance.com/tsmcs-third-quarter-revenue-surges-50-y-y-beating-market/"],
-    ["TipRanks: Why are Micron, SanDisk and SK Hynix falling today, 8 Oct", "https://www.tipranks.com/news/why-are-micron-sandisk-and-sk-hynix-stocks-falling-today-october-8"],
-    ["Yahoo Finance: Stock market today, 7 Oct (records end, bond jitters)", "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html"],
-    ["Yahoo Finance: Stock market today, 8 Oct (futures fall as oil rises)", "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-8-dow-sp-500-nasdaq-080537884.html"],
-    ["Investing.com: Most Fed members backed future rate hike, September minutes show", "https://investing.com/news/economy/most-fed-members-backed-future-rate-hike-fed-september-minutes-show-3196364"],
-    ["Share Talk: FTSE 100 falls 0.8% as bond rout and $100 oil hit markets (7 Oct)", "https://www.share-talk.com/ftse-100-falls-0-8-as-bond-rout-and-100-oil-hit-markets/"],
-    ["Investing.com: FTSE 100 slips as US bond yields climb; BoE November hike odds", "https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-slip-as-us-bond-yields-climb-miners-drag-4935692"],
-    ["Sunday Guardian: UK stocks fall as oil tops $104 and gilt yields rise (8 Oct)", "https://sundayguardianlive.com/business/why-is-uk-stock-market-down-today-ftse-100-ftse-250-and-ftse-all-share-fall-as-oil-tops-104-and-gilt-yields-rise-what-investors-should-know-301306/"],
-    ["Trading Economics: gold", "https://tradingeconomics.com/commodity/gold"],
-    ["CNBC: Stocks making the biggest moves midday, 7 Oct (Webull, Constellation Brands)", "https://www.cnbc.com/2026/10/07/stocks-making-the-biggest-moves-midday-gs-bull-ws-mu.html"],
-    ["CNBC: Stocks making the biggest moves premarket, 7 Oct", "https://www.cnbc.com/2026/10/07/stocks-making-the-biggest-moves-premarket-stz-flut-neog.html"],
-    ["GlobeNewswire: Applied Digital reports fiscal Q1 2027 results", "https://www.globenewswire.com/news-release/2026/10/07/3376854/0/en/applied-digital-reports-fiscal-first-quarter-2027-results.html"],
-    ["The Quantum Insider: IonQ advances to Stage C of DARPA QBI", "https://thequantuminsider.com/2026/10/08/ionq-advances-to-final-stage-of-darpa-quantum-benchmarking-initiative/"],
-    ["TipRanks: Why did quantum computing stocks plunge Wednesday?", "https://www.tipranks.com/news/why-did-quantum-computing-stocks-ionq-qbts-rgti-and-qubt-plunge-wednesday"],
-    ["Benzinga: Rocket Lab stock pulls back after NASA bulk-launch report", "https://www.benzinga.com/trading-ideas/movers/26/10/62221444/rocket-lab-stock-pulls-back-whats-happening"]
+    ["Vista Global: Stock market today, 8 Oct (index closes)", "https://vistapglobal.com/stock-market-today-october-8-2026-nasdaq-falls-1-25-as-oil-and-rate-worries-weigh-on-wall-street-amzn-docs-eprx-eras-gs-hpp-modd-nvda-pltr-ser-soc-spcx-t-ysg/"],
+    ["Motley Fool: Stock market today, 8 Oct", "https://fool.com/coverage/stock-market-today/2026/10/08/stock-market-today-oct-8-tech-stocks-slide-as-treasury-yields-and-oil-prices-surge"],
+    ["Yahoo Finance: Stock market today, 8 Oct (AI trade takes a hit)", "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-8-dow-sp-500-nasdaq-080537884.html"],
+    ["Yahoo Finance: OpenAI revenue $20B below previous reports; ORCL, NVDA tumble", "https://finance.yahoo.com/technology/ai/articles/openai-revenue-20b-below-previous-181839907.html"],
+    ["Trading Economics: Tech shares plunge on Thursday", "https://tradingeconomics.com/united-states/stock-market/news/590599"],
+    ["BigGo Finance: Philadelphia Semiconductor Index falls 3.4%", "https://finance.biggo.com/news/5d793ce5-4589-4eb3-9393-8e6c175795b7"],
+    ["Yahoo Finance: US stock futures rise as investors assess OpenAI reports and Delta (9 Oct)", "https://finance.yahoo.com/markets/stocks/articles/us-stock-futures-rise-investors-092540495.html"],
+    ["CNBC: Delta cuts 2026 forecast on fuel surge", "https://www.cnbc.com/2026/10/09/delta-air-lines-dal-q3-2026-earnings.html"],
+    ["Alphastreet: Delta Q3 2026 key financials", "https://news.alphastreet.com/delta-air-lines-dal-q3-2026-earnings-key-financials-and-quarterly-highlights/"],
+    ["Investing.com/Reuters: Telecom stocks slide as SpaceX spectrum deal rattles sector", "https://www.investing.com/news/stock-market-news/us-european-telecom-stocks-slide-as-spacex-spectrum-deal-rattles-sector-4940422"],
+    ["Investing.com: SpaceX spectrum deal lifts US cell tower stocks", "https://www.investing.com/news/stock-market-news/spacex-spectrum-deal-lifts-us-cell-tower-stocks-bull-and-bear-cases-outlined-93CH-4940234"],
+    ["Euronext/Reuters: FTSE 100 slips as bond yields hit multi-decade highs, energy shares soar", "https://live.euronext.com/en/financial-news/ftse-100-slips-bond-yields-hit-multi-decade-highs-energy-shares-soar"],
+    ["HDFC Sky: Brent falls 1% as Trump signals Iran talks (9 Oct)", "https://hdfcsky.com/news/brent-crude-oil-price-today-october-9-2026-brent-falls-1percent-to-103-2-as-trump-signals-iran-talks"],
+    ["Trading Economics: gold", "https://tradingeconomics.com/commodity/gold"]
   ]
 };
