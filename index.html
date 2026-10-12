@@ -24,7 +24,7 @@
   --surface-2: #eef0ec;
   --ink: #111820;
   --ink-2: #4a525c;
-  --muted: #7d848c;
+  --muted: #656c74;
   --hair: #e1e3de;
   --axis: #c4c7c1;
   --accent: #1d3a6e;
@@ -46,7 +46,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --ground: #0d1015; --surface: #151a21; --surface-2: #1c222b; --ink: #eef1f5; --ink-2: #b3bac4; --muted: #7f8893;
+    --ground: #0d1015; --surface: #151a21; --surface-2: #1c222b; --ink: #eef1f5; --ink-2: #b3bac4; --muted: #8a929d;
     --hair: #252c36; --axis: #38414d; --accent: #c9d6ee; --accent-ink: #0d1015; --focus: #5598e7;
     --good: #3cc45a; --bad: #ef6b63; --good-bg: rgba(12,163,12,.16); --bad-bg: rgba(230,103,103,.15); --warn: #e0a23a;
     --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
@@ -56,7 +56,7 @@
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --ground: #0d1015; --surface: #151a21; --surface-2: #1c222b; --ink: #eef1f5; --ink-2: #b3bac4; --muted: #7f8893;
+  --ground: #0d1015; --surface: #151a21; --surface-2: #1c222b; --ink: #eef1f5; --ink-2: #b3bac4; --muted: #8a929d;
   --hair: #252c36; --axis: #38414d; --accent: #c9d6ee; --accent-ink: #0d1015; --focus: #5598e7;
   --good: #3cc45a; --bad: #ef6b63; --good-bg: rgba(12,163,12,.16); --bad-bg: rgba(230,103,103,.15); --warn: #e0a23a;
   --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
@@ -135,7 +135,7 @@ button, input, select { font: inherit; color: inherit; }
 .ai { border-left: 1px solid var(--hair); padding-left: 18px; }
 @media (max-width: 980px) { .ai { border-left: 0; padding-left: 0; border-top: 1px solid var(--hair); padding-top: 14px; } }
 .ai-out { white-space: pre-wrap; font-size: 13.5px; max-height: 360px; overflow: auto; margin-top: 8px; color: var(--ink); }
-.btn { border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); border-radius: 8px; padding: 7px 12px; cursor: pointer; font-weight: 600; font-size: 13px; }
+.btn { border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); border-radius: 8px; padding: 7px 12px; cursor: pointer; font-weight: 600; font-size: 13px; text-decoration: none; display: inline-block; }
 .btn.ghost { background: transparent; color: var(--ink); border-color: var(--axis); }
 .btn:disabled { opacity: .5; cursor: default; }
 
@@ -186,8 +186,8 @@ table.comp { border-collapse: separate; border-spacing: 0; width: 100%; font-siz
 .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px 18px; margin-top: 14px; }
 .stat .k { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
 .stat .v { font-family: var(--mono); font-size: 15px; font-weight: 500; }
-select.pick { padding: 6px 10px; border-radius: 8px; border: 1px solid var(--hair); background: var(--surface); font-family: var(--mono); font-weight: 600; }
-.overlays { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 13px; }
+select.pick { padding: 6px 10px; border-radius: 8px; border: 1px solid var(--hair); background: var(--surface); font-family: var(--mono); font-weight: 600; max-width: 100%; min-width: 0; text-overflow: ellipsis; }
+.overlays { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 13px; min-width: 0; max-width: 100%; }
 
 /* Research cards */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
@@ -865,11 +865,13 @@ html:not(.pub) [data-pub], html.pub [data-priv], html.pub [data-copy] { display:
     </div>
     <div class="panel">
       <div class="phead"><h2>Design system</h2><span class="eyebrow">Live tokens: switch the theme to see them change</span></div>
+      <p class="sub">The full system, with every colour, type style, component and the chart rules, is documented separately.</p>
       <div class="swatches" id="abSwatches"></div>
       <div class="spec" style="margin-top:14px">
         <div><div class="s1">Aa</div><small>IBM Plex Sans · interface and reading text</small></div>
         <div><div class="s2">7,818.93 <span class="delta up" style="color:var(--good)">+0.58%</span></div><small>IBM Plex Mono · tabular numerals for every figure</small></div>
       </div>
+      <div class="stack" style="margin-top:14px"><a class="btn" href="https://claude.ai/artifact/C3NG9u6PzU8Q5B5B4Rr5j4" target="_blank" rel="noopener">Open the design system</a></div>
     </div>
     <div class="grid2">
       <div class="panel">
@@ -1000,6 +1002,7 @@ const xx = v => isNum(v) ? f(v, 1) + "×" : "n/m";
 function big(v) { if (!isNum(v)) return "—"; const a = Math.abs(v); const s = v < 0 ? "−" : ""; if (a >= 1e12) return s + "$" + f(a / 1e12, 2) + "T"; if (a >= 1e9) return s + "$" + f(a / 1e9, 1) + "B"; if (a >= 1e6) return s + "$" + f(a / 1e6, 0) + "M"; return s + "$" + f(a, 0); }
 function money(t, v) { const c = T[t].currency; if (!isNum(v)) return "—"; const d = v >= 10000 ? 0 : 2; return c === "GBX" ? f(v, d) + "p" : (c === "GBP" ? "£" : "$") + f(v, d); }
 const cls = v => isNum(v) ? (v >= 0 ? "up" : "down") : "";
+const endR = (v, horizontal = true) => horizontal ? (v >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4]) : (v >= 0 ? [4, 4, 0, 0] : [0, 0, 4, 4]);   /* dataviz: 4px data-end, square at baseline */
 const tkChip = t => `<span class="tk" style="--c:${cssCol(t)}">${esc(t)}</span>`;
 const short = t => t.replace(/\.L$/, "");
 const F = t => T[t].f || {};
@@ -1078,13 +1081,13 @@ function renderPerf() {
     const isB = t === BENCH && !S.sel.includes(BENCH);
     return { name: short(t), type: "line", showSymbol: false, smooth: false, sampling: "lttb", z: isB ? 1 : 3,
       lineStyle: { width: isB ? 1.5 : 2, color: isB ? C.bench : col(t) }, itemStyle: { color: isB ? C.bench : col(t) },
-      endLabel: { show: true, formatter: p => `${p.seriesName} ${pct(p.value[1])}`, color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 },
+      endLabel: { show: list.length <= 4, formatter: p => `${p.seriesName} ${pct(p.value[1])}`, color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 },
       labelLayout: { moveOverlap: "shiftY" }, emphasis: { focus: "series" },
       data: rows.map(r => [r[0], +((r[4] / b - 1) * 100).toFixed(2)]) };
   });
   const c = chart("perfChart");
   c.setOption(Object.assign(base(), {
-    legend: legend(), grid: { left: 8, right: 110, top: 36, bottom: 8, containLabel: true },
+    legend: legend(), grid: { left: 8, right: list.length <= 4 ? 110 : 16, top: 36, bottom: 8, containLabel: true },
     tooltip: Object.assign(base().tooltip, { trigger: "axis", axisPointer: { type: "line", lineStyle: { color: C.axis } }, valueFormatter: v => pct(v), order: "valueDesc" }),
     xAxis: axisStyle({ type: "time", splitLine: { show: false } }),
     yAxis: axisStyle({ type: "value", axisLabel: { formatter: v => v + "%", color: C.muted, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }),
@@ -1181,10 +1184,9 @@ function renderScatter() {
     xAxis: axisStyle({ type: "value", min: -10, max: XMAX, name: "Revenue growth, next FY est. (%)", nameLocation: "middle", nameGap: 28, nameTextStyle: { color: C.muted, fontSize: 11 } }),
     yAxis: axisStyle({ type: "log", min: YMIN, max: YMAX, logBase: 2, name: "Forward P/E", nameTextStyle: { color: C.muted, fontSize: 11, align: "left" }, axisLabel: { formatter: v => v + "×", color: C.muted, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }),
     series: [
-      { type: "line", data: line(1), showSymbol: false, silent: true, lineStyle: { color: C.good, width: 1, opacity: .7 }, endLabel: { show: true, formatter: "PEG 1", color: C.good, fontSize: 10 } },
-      { type: "line", data: line(2), showSymbol: false, silent: true, lineStyle: { color: C.bad, width: 1, opacity: .6 }, endLabel: { show: true, formatter: "PEG 2", color: C.bad, fontSize: 10 } },
-      { type: "scatter", data: others, symbolSize: 8, symbol: (v, p) => p.data.clamped ? "triangle" : "circle", itemStyle: { color: C.axis, opacity: .9 },
-        label: { show: true, formatter: p => short(p.data.t), position: "right", color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" }, labelLayout: { hideOverlap: true } },
+      { type: "line", data: line(1), showSymbol: false, silent: true, lineStyle: { color: C.good, width: 1, opacity: .7 }, endLabel: { show: true, formatter: "PEG 1", color: C.ink2, fontSize: 10 } },
+      { type: "line", data: line(2), showSymbol: false, silent: true, lineStyle: { color: C.bad, width: 1, opacity: .6 }, endLabel: { show: true, formatter: "PEG 2", color: C.ink2, fontSize: 10 } },
+      { type: "scatter", data: others, symbolSize: 8, symbol: (v, p) => p.data.clamped ? "triangle" : "circle", itemStyle: { color: C.axis, opacity: .9, borderColor: C.surface, borderWidth: 2 } },
       ...mine.map(p => ({ type: "scatter", name: short(p.t), data: [p], symbol: p.clamped ? "triangle" : "circle", symbolSize: 14, z: 5,
         itemStyle: { color: col(p.t), borderColor: C.surface, borderWidth: 2 },
         label: { show: true, formatter: short(p.t), position: "top", color: C.ink, fontWeight: 600, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }))
@@ -1231,7 +1233,7 @@ function renderTargets() {
   const c = chart("targetChart");
   c.getDom().style.height = Math.max(180, 48 * sel.length + 60) + "px"; c.resize();
   c.setOption(Object.assign(base(), {
-    grid: { left: 8, right: 60, top: 10, bottom: 24, containLabel: true },
+    grid: { left: 8, right: 60, top: 22, bottom: 24, containLabel: true },
     tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const d = data[p.dataIndex]; const tg = F(d.t).targets; return `<b style="font-family:IBM Plex Mono">${short(d.t)}</b> · ${d.n} analysts<br>Low ${money(d.t, tg.low)} (${pct(d.lo, 0)})<br>Median ${money(d.t, tg.median)} (${pct(d.md, 0)})<br>High ${money(d.t, tg.high)} (${pct(d.hi, 0)})`; } }),
     xAxis: axisStyle({ type: "value", axisLabel: { formatter: v => v + "%", color: C.muted, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }),
     yAxis: axisStyle({ type: "category", data: sel.map(short), inverse: true, splitLine: { show: false }, axisLabel: { color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontWeight: 600 } }),
@@ -1244,7 +1246,7 @@ function renderTargets() {
           { type: "text", style: { text: pct(d.md, 0), x: x2 + 8, y, verticalAlign: "middle", fill: C.ink, font: "600 11px IBM Plex Mono, monospace" } }
         ] };
       }, encode: { x: [0, 1, 2], y: 3 } },
-      { type: "line", data: [], markLine: { silent: true, symbol: "none", lineStyle: { color: C.ink2, type: "solid", width: 1 }, label: { formatter: "Today", position: "end", color: C.muted, fontSize: 10 }, data: [{ xAxis: 0 }] } }]
+      { type: "line", data: [], markLine: { silent: true, symbol: "none", lineStyle: { color: C.ink2, type: "solid", width: 1 }, label: { formatter: "Today", position: "start", distance: 4, color: C.muted, fontSize: 10 }, data: [{ xAxis: 0 }] } }]
   }), true);
 }
 function renderRatings() {
@@ -1259,7 +1261,7 @@ function renderRatings() {
     tooltip: Object.assign(base().tooltip, { trigger: "axis", axisPointer: { type: "shadow" }, formatter: ps => { const t = sel[ps[0].dataIndex]; const r = last(t); const tot = keys.reduce((a, k) => a + r[k[0]], 0); return `<b style="font-family:IBM Plex Mono">${short(t)}</b> · ${r.month} · ${tot} analysts<br>` + keys.map(k => `${k[1]}: ${r[k[0]]}`).join("<br>"); } }),
     xAxis: axisStyle({ type: "value", max: 100, axisLabel: { formatter: "{value}%", color: C.muted, fontSize: 11 } }),
     yAxis: axisStyle({ type: "category", data: sel.map(short), inverse: true, splitLine: { show: false }, axisLabel: { color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontWeight: 600 } }),
-    series: keys.map(([k, n, colr]) => ({ name: n, type: "bar", stack: "r", barWidth: 16, itemStyle: { color: colr, borderColor: C.surface, borderWidth: 1 },
+    series: keys.map(([k, n, colr]) => ({ name: n, type: "bar", stack: "r", barWidth: 16, itemStyle: { color: colr, borderColor: C.surface, borderWidth: 2 },
       data: sel.map(t => { const r = last(t); const tot = keys.reduce((a, kk) => a + r[kk[0]], 0) || 1; return +(r[k] / tot * 100).toFixed(1); }) }))
   }), true);
 }
@@ -1269,8 +1271,8 @@ function qLabel(date) { const d = new Date(date + "T00:00:00Z"); return "Q" + (M
 function renderQuarterLines(id, pick, empties) {
   const sel = S.sel.filter(t => F(t).quarters);
   if (!sel.length) return empty(id, empties);
-  const series = sel.map(t => { const q = F(t).quarters; const pts = pick(q); return { name: short(t), type: "line", symbol: "circle", symbolSize: 6, showSymbol: true,
-    lineStyle: { width: 2, color: col(t) }, itemStyle: { color: col(t), borderColor: C.surface, borderWidth: 1 },
+  const series = sel.map(t => { const q = F(t).quarters; const pts = pick(q); return { name: short(t), type: "line", symbol: "circle", symbolSize: 8, showSymbol: true,
+    lineStyle: { width: 2, color: col(t) }, itemStyle: { color: col(t), borderColor: C.surface, borderWidth: 2 },
     endLabel: { show: sel.length <= 4, formatter: p => `${p.seriesName} ${pct(p.value[1], 0)}`, color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 }, labelLayout: { moveOverlap: "shiftY" },
     data: pts.filter(p => isNum(p[1])).map(p => [p[0], +p[1].toFixed(1)]) }; });
   const c = chart(id);
@@ -1302,7 +1304,7 @@ function renderRevMultiples() {
       tooltip: Object.assign(base().tooltip, { trigger: "axis", axisPointer: { type: "shadow" }, valueFormatter: big }),
       xAxis: axisStyle({ type: "category", data: q.date.map(qLabel), axisLabel: { color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace", interval: 2 } }),
       yAxis: axisStyle({ type: "value", splitNumber: 3, axisLabel: { formatter: v => big(v).replace(".0", ""), color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
-      series: [{ type: "bar", data: q.revenue, barCategoryGap: "25%", itemStyle: { color: col(t), borderRadius: [3, 3, 0, 0] } }]
+      series: [{ type: "bar", data: q.revenue, barCategoryGap: "25%", barMaxWidth: 24, itemStyle: { color: col(t), borderRadius: [4, 4, 0, 0] } }]
     }), true);
   });
 }
@@ -1310,7 +1312,7 @@ function renderRevMultiples() {
 /* ---------- risk ---------- */
 function renderDrawdown() {
   const start = rangeStart(S.range);
-  const series = S.sel.map(t => { let pk = -Infinity; return { name: short(t), type: "line", showSymbol: false, sampling: "lttb", lineStyle: { width: 1.5, color: col(t) }, itemStyle: { color: col(t) },
+  const series = S.sel.map(t => { let pk = -Infinity; return { name: short(t), type: "line", showSymbol: false, sampling: "lttb", lineStyle: { width: 2, color: col(t) }, itemStyle: { color: col(t) },
     data: slice(t, start).map(r => { pk = Math.max(pk, r[4]); return [r[0], +((r[4] / pk - 1) * 100).toFixed(2)]; }) }; });
   const c = chart("ddChart");
   c.setOption(Object.assign(base(), {
@@ -1441,7 +1443,7 @@ function renderSC() {
   const rs = rsi(cl);
   const round = v => v == null ? null : +v.toFixed(4);
   const ov = [];
-  const addLine = (name, data, colr, w = 1.5) => ov.push({ name, type: "line", data: data.map(round), showSymbol: false, lineStyle: { width: w, color: colr }, itemStyle: { color: colr }, xAxisIndex: 0, yAxisIndex: 0, z: 4 });
+  const addLine = (name, data, colr, w = 2) => ov.push({ name, type: "line", data: data.map(round), showSymbol: false, lineStyle: { width: w, color: colr }, itemStyle: { color: colr }, xAxisIndex: 0, yAxisIndex: 0, z: 4 });
   if ($("#ovSma20").checked) addLine("SMA 20", sma(cl, 20), C.s[5]);
   if ($("#ovSma50").checked) addLine("SMA 50", sma(cl, 50), C.s[1]);
   if ($("#ovSma200").checked) addLine("SMA 200", sma(cl, 200), C.s[7]);
@@ -1471,10 +1473,10 @@ function renderSC() {
           data: fx.targets ? [{ name: "Median target " + money(t, fx.targets.median), yAxis: fx.targets.median }] : [] } },
       ...ov,
       { name: "Volume", type: "bar", xAxisIndex: 1, yAxisIndex: 1, data: rows.map((x, i) => ({ value: x[5], itemStyle: { color: x[4] >= x[1] ? upC : dnC, opacity: .5 } })) },
-      { name: "RSI", type: "line", xAxisIndex: 2, yAxisIndex: 2, data: rs.map(v => v == null ? null : +v.toFixed(1)), showSymbol: false, lineStyle: { width: 1.5, color: C.s[7] }, itemStyle: { color: C.s[7] },
+      { name: "RSI", type: "line", xAxisIndex: 2, yAxisIndex: 2, data: rs.map(v => v == null ? null : +v.toFixed(1)), showSymbol: false, lineStyle: { width: 2, color: C.s[7] }, itemStyle: { color: C.s[7] },
         markArea: { silent: true, itemStyle: { color: C.surface2, opacity: .8 }, data: [[{ yAxis: 30 }, { yAxis: 70 }]] } },
-      { name: "MACD", type: "line", xAxisIndex: 3, yAxisIndex: 3, data: macd.map(round), showSymbol: false, lineStyle: { width: 1.5, color: C.s[1] }, itemStyle: { color: C.s[1] } },
-      { name: "Signal", type: "line", xAxisIndex: 3, yAxisIndex: 3, data: signal.map(round), showSymbol: false, lineStyle: { width: 1.5, color: C.s[2] }, itemStyle: { color: C.s[2] } },
+      { name: "MACD", type: "line", xAxisIndex: 3, yAxisIndex: 3, data: macd.map(round), showSymbol: false, lineStyle: { width: 2, color: C.s[1] }, itemStyle: { color: C.s[1] } },
+      { name: "Signal", type: "line", xAxisIndex: 3, yAxisIndex: 3, data: signal.map(round), showSymbol: false, lineStyle: { width: 2, color: C.s[2] }, itemStyle: { color: C.s[2] } },
       { name: "Histogram", type: "bar", xAxisIndex: 3, yAxisIndex: 3, data: hist.map(v => v == null ? null : { value: +v.toFixed(4), itemStyle: { color: v >= 0 ? upC : dnC, opacity: .55 } }) }
     ]
   }), true);
@@ -1483,23 +1485,23 @@ function renderSC() {
   const lower = $("#scLower");
   Object.keys(charts).filter(k => k.startsWith("scl-")).forEach(k => { charts[k].dispose(); delete charts[k]; });
   if (r.kind !== "stock" || !fx.quarters) { lower.innerHTML = ""; return; }
-  lower.innerHTML = `<div class="panel"><div class="phead"><h2>Revenue and margins</h2><span class="eyebrow">Last 12 quarters</span></div><p class="sub">Bars are revenue. Lines on the chart below are gross and operating margin.</p><div class="chart short" id="scl-rev"></div><div class="chart short" id="scl-mg" style="height:200px"></div></div>
+  lower.innerHTML = `<div class="panel"><div class="phead"><h2>Revenue and margins</h2><span class="eyebrow">Last 12 quarters</span></div><p class="sub">Bars are revenue. Lines on the chart below are gross, operating and net margin.</p><div class="chart short" id="scl-rev"></div><div class="chart short" id="scl-mg" style="height:200px"></div></div>
     <div class="panel"><div class="phead"><h2>Analyst ratings over time</h2><span class="eyebrow">Monthly</span></div><p class="sub">A shrinking Strong Buy block, or a growing Hold block, is an early warning. Median target: ${money(t, (fx.targets || {}).median)}.</p><div class="chart" id="scl-rat" style="height:460px"></div></div>`;
   const q = fx.quarters;
   chart("scl-rev").setOption(Object.assign(base(), { grid: { left: 8, right: 8, top: 10, bottom: 4, containLabel: true }, tooltip: Object.assign(base().tooltip, { trigger: "axis", valueFormatter: big, axisPointer: { type: "shadow" } }),
     xAxis: axisStyle({ type: "category", data: q.date.map(qLabel), axisLabel: { color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
     yAxis: axisStyle({ type: "value", axisLabel: { formatter: v => big(v), color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
-    series: [{ type: "bar", name: "Revenue", data: q.revenue, itemStyle: { color: C.s[1], borderRadius: [3, 3, 0, 0] } }] }), true);
+    series: [{ type: "bar", name: "Revenue", data: q.revenue, barMaxWidth: 24, itemStyle: { color: C.s[1], borderRadius: [4, 4, 0, 0] } }] }), true);
   chart("scl-mg").setOption(Object.assign(base(), { legend: legend(), grid: { left: 8, right: 8, top: 30, bottom: 4, containLabel: true }, tooltip: Object.assign(base().tooltip, { trigger: "axis", valueFormatter: v => pct(v, 1, false) }),
     xAxis: axisStyle({ type: "category", data: q.date.map(qLabel), axisLabel: { color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
     yAxis: axisStyle({ type: "value", axisLabel: { formatter: "{value}%", color: C.muted, fontSize: 10 } }),
-    series: [["Gross margin", "grossMargin", C.s[3]], ["Operating margin", "operatingMargin", C.s[2]], ["Net margin", "profitMargin", C.s[7]]].map(([n, k, colr]) => ({ name: n, type: "line", symbolSize: 5, lineStyle: { width: 2, color: colr }, itemStyle: { color: colr }, data: (q[k] || []).map(v => v == null ? null : +(v * 100).toFixed(1)) })) }), true);
+    series: [["Gross margin", "grossMargin", C.s[1]], ["Operating margin", "operatingMargin", C.s[2]], ["Net margin", "profitMargin", C.s[3]]].map(([n, k, colr]) => ({ name: n, type: "line", symbolSize: 8, lineStyle: { width: 2, color: colr }, itemStyle: { color: colr, borderColor: C.surface, borderWidth: 2 }, data: (q[k] || []).map(v => v == null ? null : +(v * 100).toFixed(1)) })) }), true);
   const rt = fx.ratings || [];
   const keys = [["strongBuy", "Strong buy", C.vsb], ["buy", "Buy", C.vb], ["hold", "Hold", C.vh], ["sell", "Sell", C.vs], ["strongSell", "Strong sell", C.vss]];
   chart("scl-rat").setOption(Object.assign(base(), { legend: legend(), grid: { left: 8, right: 8, top: 34, bottom: 4, containLabel: true }, tooltip: Object.assign(base().tooltip, { trigger: "axis", axisPointer: { type: "shadow" } }),
     xAxis: axisStyle({ type: "category", data: rt.map(x => x.month), axisLabel: { color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
     yAxis: axisStyle({ type: "value" }),
-    series: keys.map(([k, n, colr]) => ({ name: n, type: "bar", stack: "r", data: rt.map(x => x[k]), itemStyle: { color: colr, borderColor: C.surface, borderWidth: 1 } })) }), true);
+    series: keys.map(([k, n, colr]) => ({ name: n, type: "bar", stack: "r", barMaxWidth: 24, data: rt.map(x => x[k]), itemStyle: { color: colr, borderColor: C.surface, borderWidth: 2 } })) }), true);
 }
 
 /* ---------- portfolio ---------- */
@@ -1515,7 +1517,7 @@ function renderResearch() {
     tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const d = bySince[p.dataIndex]; return `<b style="font-family:IBM Plex Mono">${short(d.t)}</b> · ${esc(d.verdict)} on ${d.date}<br>Since: ${pct(d.s)}`; } }),
     xAxis: axisStyle({ type: "value", axisLabel: { formatter: "{value}%", color: C.muted, fontSize: 10 } }),
     yAxis: axisStyle({ type: "category", data: bySince.map(d => short(d.t)), splitLine: { show: false }, axisLabel: { color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }),
-    series: [{ type: "bar", name: "calls", barWidth: 10, data: bySince.map(d => ({ value: +d.s.toFixed(1), itemStyle: { color: vc(d.verdict), borderRadius: 2 } })), label: { show: true, position: "right", formatter: p => pct(p.value, 0), color: C.ink2, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } },
+    series: [{ type: "bar", name: "calls", barWidth: 10, data: bySince.map(d => ({ value: +d.s.toFixed(1), itemStyle: { color: vc(d.verdict), borderRadius: endR(d.s) } })), label: { show: true, position: "right", formatter: p => pct(p.value, 0), color: C.ink2, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } },
       ...["BUY", "HOLD", "WATCH"].map(n => ({ name: n, type: "bar", data: [], itemStyle: { color: vc(n) } }))] }), true);
   $("#cards").innerHTML = list.map(d => `<article class="card">
     <div class="top1"><span class="tkr">${esc(short(d.t))}</span><span class="pill ${d.verdict.split(" ")[0]}">${esc(d.verdict)}</span></div>
@@ -1724,8 +1726,8 @@ function renderShowdown() {
     tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const r = rows[p.dataIndex]; return `<b>${esc(r.th)}</b> · ${r.n} stocks<br>Median ${m[1]}: ${m[4](r[m[0]])}`; } }),
     xAxis: axisStyle({ type: "value", axisLabel: { color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace", formatter: v => m[0] === "fpe" ? v + "×" : ["score", "peg"].includes(m[0]) ? v : v + "%" } }),
     yAxis: axisStyle({ type: "category", inverse: true, data: rows.map(r => r.th + (held(r.th) ? " ●" : "")), splitLine: { show: false }, axisLabel: { color: C.ink, fontSize: 12 } }),
-    series: [{ type: "bar", barWidth: 14, data: rows.map(r => ({ value: +r[m[0]].toFixed(2), itemStyle: { color: r[m[0]] < 0 && m[3] > 0 ? C.vss : C.s[1], borderRadius: 3 } })), label: { show: true, position: "right", formatter: p => m[4](p.value), color: C.ink2, fontSize: 11, fontFamily: "IBM Plex Mono, monospace" } }] }), true);
-  setTake("show", rows.length ? `On ${m[1].toLowerCase()}, <b>${esc(rows[0].th)}</b> ranks first (${m[4](rows[0][m[0]])}) and <b>${esc(rows.at(-1).th)}</b> last (${m[4](rows.at(-1)[m[0]])}). Themes marked ● are ones you own.` : "");
+    series: [{ type: "bar", barWidth: 14, data: rows.map(r => ({ value: +r[m[0]].toFixed(2), itemStyle: { color: r[m[0]] < 0 && m[3] > 0 ? C.vss : C.s[1], borderRadius: endR(r[m[0]]) } })), label: { show: true, position: "right", formatter: p => m[4](p.value), color: C.ink2, fontSize: 11, fontFamily: "IBM Plex Mono, monospace" } }] }), true);
+  setTake("show", rows.length ? `On ${m[1].toLowerCase()}, <b>${esc(rows[0].th)}</b> ranks first (${m[4](rows[0][m[0]])}) and <b>${esc(rows.at(-1).th)}</b> last (${m[4](rows.at(-1)[m[0]])}).` : "");
 }
 function renderThemeTable() {
   const rows = themeMedians(); const cols = THEME_METRICS;
@@ -1748,8 +1750,8 @@ function renderPoliticians() {
   lc.setOption(Object.assign(base(), { legend: legend({ data: ["Buys", "Sells"], icon: "roundRect", itemWidth: 10, itemHeight: 10 }), grid: { left: 8, right: 40, top: 30, bottom: 8, containLabel: true },
     tooltip: Object.assign(base().tooltip, { trigger: "axis", axisPointer: { type: "shadow" }, formatter: ps => { const p = lead[ps[0].dataIndex]; return `<b>${esc(p.name)}</b> (${p.party}, ${esc(p.chamber)})<br>${p.buys12m} buys · ${p.sells12m} sells in 12 months<br>≈ ${big(p.vol12m)} traded · last filed ${p.lastFiled || "—"}`; } }),
     xAxis: axisStyle({ type: "value", axisLabel: { color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
-    yAxis: axisStyle({ type: "category", data: lead.map(p => `${p.name} (${p.party})`), splitLine: { show: false }, axisLabel: { color: C.ink, fontSize: 11 } }),
-    series: [["Buys", "buys12m", C.vsb], ["Sells", "sells12m", C.vss]].map(([n, k, c]) => ({ name: n, type: "bar", stack: "x", barWidth: 12, data: lead.map(p => p[k]), itemStyle: { color: c, borderColor: C.surface, borderWidth: 1 } })) }), true);
+    yAxis: axisStyle({ type: "category", data: lead.map(p => `${p.name} (${p.party}) · ${f(p.buys12m + p.sells12m, 0)}`), splitLine: { show: false }, axisLabel: { color: C.ink, fontSize: 11 } }),
+    series: [["Buys", "buys12m", C.vsb], ["Sells", "sells12m", C.vss]].map(([n, k, c]) => ({ name: n, type: "bar", stack: "x", barWidth: 12, data: lead.map(p => p[k]), itemStyle: { color: c, borderColor: C.surface, borderWidth: 2 } })) }), true);
   lc.off("click"); lc.on("click", e => { polIdx = POL.indexOf(lead[e.dataIndex]); renderPolProfile(); $("#polSel").scrollIntoView({ block: "center" }); });
   const top = lead.at(-1);
   setTake("lead", `<b>${esc(top.name)}</b> is the most active trader right now (${top.buys12m + top.sells12m} trades in 12 months). High counts often mean a managed account trading on their behalf, so check sizes, not just counts.`);
@@ -1763,7 +1765,7 @@ function renderPoliticians() {
     tooltip: Object.assign(base().tooltip, { trigger: "axis", axisPointer: { type: "shadow" }, formatter: ps => { const [t, a] = wb[ps[0].dataIndex]; return `<b style="font-family:IBM Plex Mono">${esc(t)}</b>${T[t] ? " · " + esc(T[t].name) : ""}<br>Bought by: ${[...a.buyers].slice(0, 6).map(esc).join(", ")}${a.buyers.size > 6 ? "…" : ""}<br>≈ ${big(a.buy)} bought · ${big(a.sell)} sold`; } }),
     xAxis: axisStyle({ type: "value", minInterval: 1, axisLabel: { color: C.muted, fontSize: 10 } }),
     yAxis: axisStyle({ type: "category", data: wb.map(([t]) => t + (heldSet.has(t) ? " ●" : "")), splitLine: { show: false }, axisLabel: { color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }),
-    series: [["Politicians buying", "buyers", C.vsb], ["Politicians selling", "sellers", C.vss]].map(([n, k, c]) => ({ name: n, type: "bar", barGap: "10%", barWidth: 7, data: wb.map(([, a]) => a[k].size), itemStyle: { color: c, borderRadius: 2 } })) }), true);
+    series: [["Politicians buying", "buyers", C.vsb], ["Politicians selling", "sellers", C.vss]].map(([n, k, c]) => ({ name: n, type: "bar", barGap: "10%", barWidth: 7, data: wb.map(([, a]) => a[k].size), itemStyle: { color: c, borderRadius: [0, 4, 4, 0] } })) }), true);
   const wtop = wb.at(-1);
   setTake("wbuy", wtop ? `Over the last ${congWin === 365 ? "12 months" : congWin + " days"}, <span class="tk">${esc(wtop[0])}</span> was bought by the most politicians (${wtop[1].buyers.size}). ${wb.filter(([t]) => heldSet.has(t)).length ? `Of the researched names, ${wb.filter(([t]) => heldSet.has(t)).map(([t]) => tkChip(t)).join(" ")} made the list.` : "None of the researched names made the list."}` : "No disclosed stock purchases in this window.");
   // selector
@@ -1782,7 +1784,7 @@ function renderPolProfile() {
     tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: q => `<b style="font-family:IBM Plex Mono">${bars[q.dataIndex][0]}</b><br>${q.value >= 0 ? "Bought" : "Sold"} ≈ ${big(Math.abs(q.value))} (range midpoints)` }),
     xAxis: axisStyle({ type: "value", axisLabel: { formatter: v => big(Math.abs(v)).replace(".0", ""), color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
     yAxis: axisStyle({ type: "category", data: bars.map(b => (b[1] >= 0 ? "▲ " : "▼ ") + b[0] + (heldSet.has(b[0]) ? " ●" : "")), splitLine: { show: false }, axisLabel: { color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }),
-    series: [{ type: "bar", barWidth: 10, data: bars.map(b => ({ value: b[1], itemStyle: { color: b[1] >= 0 ? C.vsb : C.vss, borderRadius: 2 } })), label: { show: true, position: "right", formatter: q => big(Math.abs(q.value)), color: C.ink2, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }] }), true);
+    series: [{ type: "bar", barWidth: 10, data: bars.map(b => ({ value: b[1], itemStyle: { color: b[1] >= 0 ? C.vsb : C.vss, borderRadius: endR(b[1]) } })), label: { show: true, position: "right", formatter: q => big(Math.abs(q.value)), color: C.ink2, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }] }), true);
   $("#polTable").innerHTML = `<thead><tr><th>Filed</th><th>Traded</th><th>Ticker</th><th>Type</th><th>Amount</th><th class="num">Excess return</th></tr></thead><tbody>` + p.trades.slice(0, 100).map(x => `<tr class="${heldSet.has(x.t) ? "mine" : ""}"><td>${esc(x.filed)}</td><td>${esc(x.traded)}</td><td>${T[x.t] ? tkChip(x.t) : `<span class="mono">${esc(x.t || "—")}</span>`}</td><td><span class="bs ${x.side}">${x.side === "P" ? "Buy" : "Sell"}</span>${x.kind && x.kind !== "Stock" ? ` <span class="tag">${esc(x.kind)}</span>` : ""}</td><td>${esc(x.range)}</td><td class="num ${cls(x.excess)}">${isNum(x.excess) ? pct(x.excess, 0) : "—"}</td></tr>`).join("") + "</tbody>";
   const touch = p.trades.filter(x => x.traded >= yr && watchSet.has(x.t));
   setTake("pol", `${esc(p.name)} made ${p.buys12m + p.sells12m} disclosed trades in 12 months (${p.buys12m} buys, ${p.sells12m} sells), latest filed ${esc(p.lastFiled || "—")}. ${p.topBuys[0] ? `Biggest buy: <span class="tk">${esc(p.topBuys[0][0])}</span> (≈ ${big(p.topBuys[0][1])}).` : ""} ${touch.length ? `Traded stocks in the research log ${touch.length} time${touch.length > 1 ? "s" : ""}: ${[...new Set(touch.map(x => x.t))].map(tkChip).join(" ")}.` : "No trades in research-log stocks in the last 12 months."}`);
@@ -1804,7 +1806,7 @@ function renderSmart() {
     tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const [t, s] = names[p.dataIndex]; return `<b style="font-family:IBM Plex Mono">${t}</b><br>Bought ${big(s.buys)} · Sold ${big(s.sells)}<br>Net ${big(s.net)}`; } }),
     xAxis: axisStyle({ type: "value", axisLabel: { formatter: v => big(v).replace(".0", ""), color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
     yAxis: axisStyle({ type: "category", data: names.map(x => x[0]), splitLine: { show: false }, axisLabel: { color: C.ink, fontFamily: "IBM Plex Mono, monospace", fontSize: 11 } }),
-    series: [{ type: "bar", barWidth: 10, data: names.map(([, s]) => ({ value: s.net, itemStyle: { color: s.net >= 0 ? C.vsb : C.vss, borderRadius: 2 } })), label: { show: true, position: "right", formatter: p => big(p.value), color: C.ink2, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }] }), true);
+    series: [{ type: "bar", barWidth: 10, data: names.map(([, s]) => ({ value: s.net, itemStyle: { color: s.net >= 0 ? C.vsb : C.vss, borderRadius: endR(s.net) } })), label: { show: true, position: "right", formatter: p => big(p.value), color: C.ink2, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }] }), true);
   const nb = names.filter(x => x[1].net > 0).map(x => x[0]);
   setTake("insnet", `Insiders were net <b>buyers</b> in ${nb.length ? nb.map(t => `<span class="tk">${t}</span>`).join(" ") : "none of these names"} over the last year. ${names.length ? `The heaviest net selling was at <span class="tk">${names[0][0]}</span> (${big(names[0][1].net)}). Heavy selling is common at companies whose founders are paid in stock, so buying is the rarer and stronger signal.` : ""}`);
   // market-wide buys
@@ -1828,9 +1830,9 @@ function renderInsider() {
   chart("insChart").setOption(Object.assign(base(), { legend: legend({ data: ["Price", "Insider buy", "Insider sell"] }), grid: { left: 8, right: 16, top: 34, bottom: 8, containLabel: true },
     tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => p.data && p.data.r ? `<b>${esc(p.data.r.who)}</b> · ${esc(p.data.r.title)}<br>${p.data.r.type === "P" ? "Bought" : "Sold"} ${f(Math.abs(p.data.r.qty), 0)} shares at $${f(p.data.r.price, 2)}<br>${big(Math.abs(p.data.r.value))} · traded ${p.data.r.traded}` : `${p.value[0]}: ${money(t, p.value[1])}` }),
     xAxis: axisStyle({ type: "time", splitLine: { show: false } }), yAxis: axisStyle({ type: "value", scale: true, axisLabel: { formatter: v => money(t, v), color: C.muted, fontSize: 10, fontFamily: "IBM Plex Mono, monospace" } }),
-    series: [{ name: "Price", type: "line", data: px, showSymbol: false, lineStyle: { width: 1.5, color: C.ink2 }, itemStyle: { color: C.ink2 } },
-      { name: "Insider buy", type: "scatter", symbol: "triangle", data: mk("P"), itemStyle: { color: C.good, borderColor: C.surface, borderWidth: 1.5 }, z: 5 },
-      { name: "Insider sell", type: "scatter", symbol: "triangle", symbolRotate: 180, data: mk("S"), itemStyle: { color: C.bad, borderColor: C.surface, borderWidth: 1.5, opacity: .8 }, z: 4 }] }), true);
+    series: [{ name: "Price", type: "line", data: px, showSymbol: false, lineStyle: { width: 2, color: C.ink2 }, itemStyle: { color: C.ink2 } },
+      { name: "Insider buy", type: "scatter", symbol: "triangle", data: mk("P"), itemStyle: { color: C.good, borderColor: C.surface, borderWidth: 2 }, z: 5 },
+      { name: "Insider sell", type: "scatter", symbol: "triangle", symbolRotate: 180, data: mk("S"), itemStyle: { color: C.bad, borderColor: C.surface, borderWidth: 2, opacity: .8 }, z: 4 }] }), true);
   $("#insTable").innerHTML = `<thead><tr><th>Traded</th><th>Insider</th><th>Role</th><th>Type</th><th class="num">Shares</th><th class="num">Price</th><th class="num">Value</th></tr></thead><tbody>` + rows.map(r => `<tr><td>${esc(r.traded)}</td><td>${esc(r.who)}</td><td>${esc(r.title)}</td><td><span class="bs ${r.type}">${r.type === "P" ? "Buy" : "Sell"}</span></td><td class="num">${f(Math.abs(r.qty), 0)}</td><td class="num">${isNum(r.price) ? "$" + f(r.price, 2) : "—"}</td><td class="num">${big(Math.abs(r.value))}</td></tr>`).join("") + "</tbody>";
   const bigBuy = rows.filter(r => r.type === "P").sort((a, b) => b.value - a.value)[0];
   setTake("ins", `${t}: insiders bought ${big(s12.buys)} and sold ${big(s12.sells)} in the last 12 months. ${bigBuy ? `Largest purchase: ${esc(bigBuy.who)} (${esc(bigBuy.title)}) bought ${big(bigBuy.value)} at $${f(bigBuy.price, 2)} on ${bigBuy.traded}; the stock is ${pct((T[t].price / bigBuy.price - 1) * 100, 0)} since.` : "No open-market purchases in two years, only sales."}`);
@@ -1896,8 +1898,8 @@ function renderQv() {
     tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const x = p.data.x; return `<b>${esc(x.name)}</b> ${mkTag(x)}<br>${esc(x.sector)} · ${esc(x.country)}<br>HQ Score ${x.hq} · cheaper than ${x.valueGap}% of sector<br>Fwd P/E ${xx(x.f.peForward)} · 1Y ${pct(x.f.ch1y, 0)}${x.gem ? "<br><b>Ignored gem:</b> " + esc(x.gem.join(", ")) : ""}`; } }),
     xAxis: axisStyle({ type: "value", min: 0, max: 100, name: "Value gap: cheaper than X% of sector peers →", nameLocation: "middle", nameGap: 28, nameTextStyle: { color: C.muted, fontSize: 11 } }),
     yAxis: axisStyle({ type: "value", min: 0, max: 100, name: "HQ Score: better business ↑", nameLocation: "middle", nameGap: 34, nameRotate: 90, nameTextStyle: { color: C.muted, fontSize: 11 } }),
-    series: regions.map(([r, colr]) => ({ name: r, type: "scatter", data: pts.filter(x => x.market === r).map(x => ({ value: [x.valueGap, x.hq], x, symbolSize: x.gem ? 11 : 6, itemStyle: x.gem ? { color: colr, borderColor: C.ink, borderWidth: 1.5 } : { color: colr, opacity: .55 } })), large: false }))
-      .concat([{ type: "scatter", data: [], markArea: { silent: true, itemStyle: { color: "rgba(12,163,12,.07)" }, label: { show: true, position: "insideTopRight", color: C.good, fontSize: 11, formatter: "Great and cheap" }, data: [[{ xAxis: 60, yAxis: 60 }, { xAxis: 100, yAxis: 100 }]] } }]) }), true);
+    series: regions.map(([r, colr]) => ({ name: r, type: "scatter", data: pts.filter(x => x.market === r).map(x => ({ value: [x.valueGap, x.hq], x, symbolSize: x.gem ? 12 : 8, itemStyle: x.gem ? { color: colr, borderColor: C.ink, borderWidth: 2 } : { color: colr, opacity: .5, borderColor: C.surface, borderWidth: 1 } })), large: false }))
+      .concat([{ type: "scatter", data: [], markArea: { silent: true, itemStyle: { color: "rgba(12,163,12,.07)" }, label: { show: true, position: "insideTopRight", color: C.ink2, fontSize: 11, formatter: "Great and cheap" }, data: [[{ xAxis: 60, yAxis: 60 }, { xAxis: 100, yAxis: 100 }]] } }]) }), true);
   const corner = pts.filter(x => x.hq >= 60 && x.valueGap >= 60);
   setTake("qv", `${corner.length} of ${pts.length} stocks sit in the green "great and cheap" corner${uniRegion !== "All" ? ` (${uniRegion === "EU" ? "Europe" : uniRegion})` : ""}. ${corner.filter(x => x.market !== "US").length} of them are UK or European, where valuations run lower than in the US.`);
 }
