@@ -328,11 +328,24 @@ table.plain { border-collapse: collapse; width: 100%; font-size: 12.5px; }
   --surface-3: #e6e9e3; --tape-gain: #6be08a; --tape-loss: #ff9b92;
   --fs-12: 12px; --fs-14: 14px; --fs-16: 16px; --fs-20: 20px; --fs-28: 28px; --fs-40: 40px;
   --r: 8px; --ease: cubic-bezier(.2, .7, .2, 1);
+  --radius-glass: 12px;
+  --glass: rgba(252,252,251,.78); --glass-solid: #fafaf9; --glass-bar: rgba(243,244,241,.74);
+  --glass-border: rgba(17,24,32,.08); --glass-hi: rgba(255,255,255,.75);
+  --glass-shadow: 0 1px 2px rgba(17,24,32,.04), 0 8px 24px rgba(17,24,32,.06);
+  --glow-1: rgba(42,120,214,.10); --glow-2: rgba(29,58,110,.08);
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --navy: #15284c; --navy-deep: #0a1426; --on-navy: #eef2f8; --on-navy-2: #9aa8bf; --accent-line: #86b6ef; --surface-3: #232a35; }
+  :root:not([data-theme="light"]) { --navy: #15284c; --navy-deep: #0a1426; --on-navy: #eef2f8; --on-navy-2: #9aa8bf; --accent-line: #86b6ef; --surface-3: #232a35;
+    --glass: rgba(21,26,33,.72); --glass-solid: #13171e; --glass-bar: rgba(13,16,21,.72);
+    --glass-border: rgba(255,255,255,.07); --glass-hi: rgba(255,255,255,.06);
+    --glass-shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.25);
+    --glow-1: rgba(57,135,229,.16); --glow-2: rgba(144,133,233,.08); }
 }
-:root[data-theme="dark"] { --navy: #15284c; --navy-deep: #0a1426; --on-navy: #eef2f8; --on-navy-2: #9aa8bf; --accent-line: #86b6ef; --surface-3: #232a35; }
+:root[data-theme="dark"] { --navy: #15284c; --navy-deep: #0a1426; --on-navy: #eef2f8; --on-navy-2: #9aa8bf; --accent-line: #86b6ef; --surface-3: #232a35;
+    --glass: rgba(21,26,33,.72); --glass-solid: #13171e; --glass-bar: rgba(13,16,21,.72);
+    --glass-border: rgba(255,255,255,.07); --glass-hi: rgba(255,255,255,.06);
+    --glass-shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.25);
+    --glow-1: rgba(57,135,229,.16); --glow-2: rgba(144,133,233,.08); }
 
 /* Header */
 .hq-top { position: relative; overflow: hidden; background: var(--navy-deep); color: var(--on-navy); }
@@ -409,8 +422,14 @@ table.plain { border-collapse: collapse; width: 100%; font-size: 12.5px; }
 
 /* Cover strips */
 .cover { position: relative; height: 120px; border-radius: var(--r); overflow: hidden; background: var(--navy-deep); color: var(--on-navy); isolation: isolate; }
-@media (min-width: 761px) { .cover { height: 132px; } }
-.cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: -2; }
+@media (min-width: 761px) { .cover { height: 160px; } }
+.cover.hero { height: 190px; }
+@media (min-width: 761px) { .cover.hero { height: 250px; } .cover.hero .cover-txt h2 { font-size: 36px; } }
+.cover.hero img { transform-origin: 72% 62%; animation: hqKen 26s ease-in-out infinite alternate; }
+@keyframes hqKen { from { transform: scale(1); } to { transform: scale(1.07) translateX(-1.2%); } }
+@media (max-width: 760px) { .cover::before { background: linear-gradient(90deg, rgba(10, 20, 38, .95) 0%, rgba(10, 20, 38, .82) 58%, rgba(10, 20, 38, .2) 100%); } }
+.cover img { position: absolute; top: 0; right: 0; height: 100%; width: auto; aspect-ratio: 2.1 / 1; max-width: 100%; object-fit: cover; z-index: -2;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38%); mask-image: linear-gradient(90deg, transparent 0%, #000 38%); }
 .cover::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(10, 20, 38, .94) 0%, rgba(10, 20, 38, .72) 42%, rgba(10, 20, 38, .05) 80%); }
 .cover .hq-drift { z-index: -1; opacity: .45; }
 .cover-txt { height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 0 20px; max-width: 64ch; }
@@ -477,6 +496,22 @@ html.anim-paused *, html.anim-paused *::before, html.anim-paused *::after { anim
   .wrap { padding-inline: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .tape { overflow-x: auto; } }
+
+/* Glass restyle (Oct 2026): frosted panels over a soft glow; solid fallback for reduced transparency */
+body { background: radial-gradient(1100px 620px at 88% -8%, var(--glow-1), transparent 62%), radial-gradient(900px 560px at -6% 38%, var(--glow-2), transparent 60%), var(--ground); background-attachment: fixed; }
+.panel, .kpi, .card, .idea, .paper, .rcard, .sector-card { background: var(--glass); border-color: var(--glass-border); box-shadow: inset 0 1px 0 var(--glass-hi), var(--glass-shadow); }
+.panel, .kpi, .card, .idea, .paper { border-radius: var(--radius-glass); }
+.cover { border-radius: var(--radius-glass); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), var(--glass-shadow); }
+.comp th:first-child, .comp td:first-child, .comp thead th, .scr th { background: var(--glass-solid); }
+@media (max-width: 760px) { .plain th:first-child, .plain td:first-child, .scr th:nth-child(2), .scr td:nth-child(2) { background: var(--glass-solid); } }
+.tabbar, .filters { background: var(--glass-bar); -webkit-backdrop-filter: blur(14px) saturate(160%); backdrop-filter: blur(14px) saturate(160%); }
+.moresheet, .suggest { background: var(--glass); -webkit-backdrop-filter: blur(18px) saturate(160%); backdrop-filter: blur(18px) saturate(160%); border-color: var(--glass-border); }
+.btn { box-shadow: inset 0 1px 0 rgba(255,255,255,.18); }
+@media (max-width: 760px) { .tabbar { background: var(--glass-bar); } }
+@media (prefers-reduced-transparency: reduce) {
+  :root { --glass: var(--surface); --glass-bar: var(--ground); --glass-solid: var(--surface); }
+  .tabbar, .filters, .moresheet, .suggest { -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
 
 /* Public vs private build: build_public.py adds class "pub" to <html> */
 html:not(.pub) [data-pub], html.pub [data-priv], html.pub [data-copy] { display: none !important; }
@@ -1941,7 +1976,7 @@ function buildCovers() {
   Object.entries(COVERS).forEach(([v, [t, d]]) => {
     const sec = $("#view-" + v); if (!sec || sec.querySelector(".cover")) return;
     const img = ART["cover-" + v] || ART.banner;
-    sec.insertAdjacentHTML("afterbegin", `<div class="cover">${img ? `<img src="${img}" alt="" width="1024" height="512" decoding="async"${v === "brief" ? "" : ' loading="lazy"'}>` : ""}${DRIFT_SVG}<div class="cover-txt"><h2>${esc(t)}</h2><p>${esc(d)}</p></div></div>`);
+    sec.insertAdjacentHTML("afterbegin", `<div class="cover${v === "brief" ? " hero" : ""}">${img ? `<img src="${img}" alt="" width="1024" height="512" decoding="async">` : ""}${DRIFT_SVG}<div class="cover-txt"><h2>${esc(t)}</h2><p>${esc(d)}</p></div></div>`);
   });
   if (ART.banner) $("#hqBg").insertAdjacentHTML("afterbegin", `<img src="${ART.banner}" alt="" width="1024" height="512" decoding="async">`);
   if (ART.logo) { const box = $("#logoBox"); const svg = box.innerHTML; const im = new Image(); im.alt = "Stock Research HQ"; im.width = 36; im.height = 36; im.onerror = () => { box.innerHTML = svg; }; im.src = ART.logo; box.innerHTML = ""; box.appendChild(im); }
