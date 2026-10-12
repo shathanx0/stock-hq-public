@@ -1,65 +1,73 @@
 // Public morning brief: general market only. No portfolio, account or holdings content.
 // Written alongside the private brief.js; build_public.py publishes it as brief.js on the public site and leak-checks it first.
 window.HQ_BRIEF = {
-  date: "2026-10-11",
-  edition: "Sunday 11 October 2026 · Weekend edition",
-  headline: "Stocks shook off the OpenAI scare to end the week higher; SpaceX's airwaves deal wiped about $39 billion off US phone carriers",
-  dek: "The S&P 500 rose 0.6% on Friday and 1.2% over the week, close to its record, as worries about OpenAI's revenue faded. The FTSE 100 had its best day of the week, up 1.1%, as oil and gilt yields eased. Gold rose about 1.5% to around $4,220. US consumer sentiment fell to its lowest since May. Next week brings US inflation data on Wednesday, the start of bank earnings and TSMC's results on Thursday.",
+  date: "2026-10-12",
+  edition: "Monday 12 October 2026 · Morning edition",
+  headline: "A calm start to a big week: oil eases on Trump's Russia 'energy ceasefire' claim, while inflation, bank results and TSMC wait",
+  dek: "US futures are up about 0.1–0.2% and the FTSE 100 is up about 0.6% this morning, near 10,616, led by banks. Brent is slightly lower at about $104.5 after the US eased sanctions on Russian diesel and Trump claimed an energy ceasefire between Russia and Ukraine, though the Houthis struck Riyadh's airport twice over the weekend. Gold is down about 0.4% to around $4,176. Recruiter Hays fell about 11% on weak permanent hiring.",
   market: [
-    { k: "S&P 500", v: "7,811.54", d: "+0.59% Fri · +1.2% on the week, near its record" },
-    { k: "Nasdaq", v: "27,366.17", d: "+0.64% Fri · +0.6% on the week" },
-    { k: "FTSE 100", v: "10,552.05", d: "+1.06% Fri · best day of the week as gilt yields eased" },
-    { k: "Gold", v: "~$4,220/oz", d: "about +1.5% Fri" },
-    { k: "Brent oil", v: "~$104", d: "about −0.4% Fri · WTI ~$92 · US 10-year yield 5.24%" }
+    { k: "S&P 500", v: "7,811.54", d: "+0.59% Fri · futures about +0.1–0.2% Mon morning" },
+    { k: "Nasdaq", v: "27,366.17", d: "+0.64% Fri · Nasdaq-100 futures roughly flat to +0.3%" },
+    { k: "FTSE 100", v: "~10,616", d: "about +0.6% Mon morning · banks lead · Fri close 10,552.05" },
+    { k: "Gold", v: "~$4,176/oz", d: "about −0.4% Mon as oil eases" },
+    { k: "Brent oil", v: "~$104.5", d: "about −0.3% Mon · WTI ~$91.6 · US 10-year 5.24%" }
   ],
   sections: [
     {
       title: "The big picture",
       paras: [
-        "Friday undid much of Thursday's AI wobble. Investors went back to tech after reports painted OpenAI's finances in a better light, and all three big US indexes rose: the S&P 500 0.59% to 7,811.54, the Nasdaq 0.64% to 27,366.17 and the Dow 0.83%. It was a fourth weekly gain in a row. The mood under the surface was weaker: the University of Michigan's consumer sentiment reading fell to 46.3, its lowest since May, as people complained about the cost of living.",
-        "In London the FTSE 100 rose 1.06% to 10,552.05 as oil eased and gilt yields came off the multi-decade highs reached earlier in the week. Brent ended around $104 and the US 10-year yield at 5.24%, below Wednesday's 24-year high of 5.37%. Next week brings US inflation on Wednesday (forecast 3.6% a year, up from 3.4%), and a hot number could revive talk of a Fed rate rise at the 27–28 October meeting. TSMC reports on Thursday, the next big test of AI demand."
+        "There's no fresh US session to report: Friday's rally (S&P 500 +0.59% to 7,811.54, Nasdaq +0.64%) ended a fourth winning week in a row. Over the weekend two things pulled oil in opposite directions. On Friday the US issued a temporary licence allowing Russian diesel to be sold, including into the US, until April 2027, and Russia said it would lift its diesel export ban; on Saturday Trump said Russia and Ukraine had agreed an 'energy ceasefire'. Zelenskiy said Ukraine would accept it but was waiting to hear when it starts, and the Kremlin hadn't confirmed it. Against that, Houthi strikes on Riyadh's main airport killed at least 12 people on Saturday and another hit on Sunday, and Trump suggested the US could join the fight. The net result this morning is Brent a touch lower, at about $104.5.",
+        "Futures are slightly higher and London is up about 0.6%, led by HSBC and Standard Chartered. US bond markets are shut for Columbus Day, but stocks trade. The week's three tests: big US bank results from Tuesday (JPMorgan, Goldman, Citi), September US inflation on Wednesday (forecasts 3.6–3.7% a year, with core prices expected up about 0.2% on the month) and TSMC's results on Thursday. A hot core number could put a Fed rate rise on 28 October back on the table."
       ]
     },
     {
       title: "Stocks in the news",
       items: [
-        { t: "HUM", h: "Humana jumped about 12–15% after 95% of its Medicare Advantage members landed in four-star-or-better plans for 2027.", b: "A year ago that figure was about 20%, and JPMorgan analysts had expected 60–70%. Plans rated four stars or higher earn government bonus payments; reports put Humana's potential 2028 bonus at about $4.8 billion, though how much reaches profit depends on how much it reinvests." },
-        { t: "TMUS", h: "T-Mobile, AT&T and Verizon fell 8.5–13% after SpaceX agreed to buy $8 billion of airwaves.", b: "Investors worry SpaceX's Starlink could become a real mobile competitor. Together the three carriers lost about $39 billion in market value, almost five times what SpaceX paid. Tower owners went the other way: Crown Castle, American Tower and SBA rose 7–16% on hopes of new ground-based demand." },
-        { t: "LITE", h: "Lumentum rose about 5% on strong demand for optical parts used in AI data centres.", b: "The company pointed to demand lasting through 2029 for the lasers and optical components that connect AI servers. It reports on 5 November." },
-        { t: "VST", h: "Vistra rose 3.4% on Friday and about 15% over the week.", b: "On Tuesday the US Energy Department conditionally committed up to $4.2 billion to help Vistra upgrade four nuclear plants. Power producers have rallied all week as tech companies sign long-term deals for nuclear power." }
+        { t: "HAS.L", h: "Hays fell about 11% after first-quarter fees dropped 3% and it saw no near-term recovery.", b: "Net fees fell 3% like-for-like, slightly better than the 4% analysts expected, but permanent hiring fees were down 7%, with Germany down 6% and the UK down 5%. The company has saved £10 million of its £50 million cost-cutting target so far. Recruiters are often an early read on the jobs market." },
+        { t: "PNN.L", h: "Pennon (South West Water) fell about 10% after two brokers downgraded it.", b: "RBC cut it to sector perform on Friday with a 400p target (from 575p), citing a tougher outlook for returns over the current regulatory period, and Deutsche Bank also cut it to hold, with a 380p target (from 550p)." },
+        { t: "JPM", h: "JPMorgan kicks off bank results on Tuesday, with earnings expected up about 16%.", b: "Analysts expect third-quarter earnings of about $5.90 a share on revenue near $51.3 billion, and options pricing implies a move of about 3.3% either way. Banks tend to set the tone for the earnings season." },
+        { t: "TSM", h: "TSMC reports on Thursday, the week's big test of AI chip demand.", b: "It guided to $44.6–45.8 billion of revenue for the quarter with a 65–67% gross margin. Its outlook will be read across the whole chip sector." }
       ]
     },
     {
       title: "Deals and catalysts worth researching",
       intro: "Deals with concrete numbers. None of these guarantees a profit: big news is often priced in within hours, and the payoff can take years.",
       items: [
-        { t: "SpaceX", h: "SpaceX: $8B cash for Grain Management's 800 MHz airwaves (8 Oct)", b: "Low-band airwaves travel further and reach inside buildings, filling a gap for satellite-to-phone service. It needs FCC approval, and any real threat to the carriers would take years to build." },
-        { t: "VST", h: "Vistra: up to $4.2B conditional US Energy Department loan for 433 MW of reactor upgrades (6 Oct)", b: "It covers four nuclear plants in Pennsylvania and Ohio and lowers how much Vistra must fund upfront. 'Conditional' means it isn't final yet, and the shares are already up about 15% on the week." },
-        { t: "SHEL", h: "Shell: buying a 30% stake in Equinor's Bay du Nord oil project off Canada (9 Oct)", b: "Shell rose 0.4% on the news. Big offshore projects take years to reach first oil, so the payoff depends on oil prices well beyond today's." }
+        { t: "RTX", h: "Raytheon: up to $6.3B multi-year Pentagon deal for SM-3 Block IB missile interceptors (8 Oct)", b: "The base contract is $4.4 billion over five years, with about $2 billion more in options. It adds to recent Raytheon deals worth $24.4 billion (SM-6) and $22.9 billion (Tomahawk), part of a push to rebuild missile stocks." },
+        { t: "BA", h: "Boeing: up to $14.7B to boost production of Patriot PAC-3 interceptor seekers (5 Oct)", b: "It is an 'undefinitized' contract, meaning the final terms and price are still to be agreed, so the headline number is a ceiling rather than guaranteed revenue." },
+        { t: "VTRS", h: "Viatris to buy Pacira BioSciences for $1.65B, $36.50 a share in cash (8 Oct)", b: "That's a 44.8% premium; Pacira jumped about 44% and Viatris slipped about 2%, the usual pattern where the buyer pays up. Pacira made about $746 million of revenue in the year to June. Closing is expected by the end of 2026." }
       ]
     }
   ],
   calendar: [
-    { d: "Mon 12 Oct", e: "US Columbus Day: stocks open, bond market closed · IMF meetings begin" },
-    { d: "Tue 13 Oct", e: "Q3 bank results: JPMorgan, Goldman Sachs, Citi, Wells Fargo · J&J" },
-    { d: "Wed 14 Oct", e: "US CPI inflation (Sept), 1:30pm UK, forecast 3.6% y/y · ASML results · Bank of America, Morgan Stanley, BlackRock · Fed Beige Book" },
-    { d: "Thu 15 Oct", e: "TSMC Q3 results and outlook · US PPI and retail sales (Sept)" },
-    { d: "Fri 16 Oct", e: "US industrial production (Sept)" },
-    { d: "Later", e: "Fed decision 27–28 Oct · UK Budget 28 Oct · US midterms 3 Nov · Bank of England 5 Nov · Nvidia 18 Nov" }
+    { d: "Mon 12 Oct", e: "US Columbus Day: stocks open, bond market closed · Hays results" },
+    { d: "Tue 13 Oct", e: "Q3 bank results: JPMorgan, Goldman Sachs, Citi · UK: BP trading update, Rio Tinto output, Whitbread, Bellway" },
+    { d: "Wed 14 Oct", e: "US CPI inflation (Sept), 1:30pm UK, forecast 3.6–3.7% y/y · ASML results · Bank of America, Morgan Stanley" },
+    { d: "Thu 15 Oct", e: "TSMC Q3 results, 7pm UK · US PPI and retail sales (Sept) · UK GDP (Aug), date per calendars" },
+    { d: "Fri 16 Oct", e: "Man Group update · US industrial production (Sept)" },
+    { d: "Later", e: "UK jobs data 20 Oct · Fed decision 28 Oct · UK Budget 28 Oct · US midterms 3 Nov · Bank of England 5 Nov" }
   ],
-  bottomLine: "The market treated Thursday's OpenAI scare as a blip and finished the week near its record, but next week holds the real tests: Wednesday's US inflation number, which could put a Fed rate rise back on the table, and TSMC's read on AI demand on Thursday.",
+  bottomLine: "Today is quiet; Wednesday's US inflation figure is the one that matters. If core prices rise faster than the 0.2% expected, talk of a Fed rate rise on 28 October will return, and with the 10-year yield already at 5.24%, that would test a market sitting near its record.",
   sources: [
-    ["La Nación/AP: How major US stock indexes fared, Friday 9 Oct", "https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-1092026-nid09102026/"],
-    ["Yahoo Finance: Markets news, 9 Oct (oil, yields, movers)", "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-9-2026-105547352.html"],
-    ["Yahoo Finance: Stock market today, 9 Oct (consumer sentiment)", "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-9-dow-sp-500-nasdaq-080148117.html"],
-    ["Vista Global: Weekly market summary, 9 Oct (gold, Lumentum)", "https://vistapglobal.com/weekly-market-summary-friday-october-9-2026-stocks-close-higher-as-ai-rebounds-and-consumer-sentiment-weakens-amwl-dal-docs-eprx-lite-lly-lpl-modd-mrna-nvda-ser-tsla-ysg/"],
-    ["Share Talk: FTSE 100 jumps 1.1% as oil and bond yields ease (Shell)", "https://www.share-talk.com/ftse-100-jumps-1-1-as-oil-and-bond-yields-ease/"],
-    ["TIKR: Humana soars on Medicare star ratings", "https://www.tikr.com/blog/humana-soars-15-on-medicare-star-ratings-95-of-members-in-four-star-plans"],
-    ["Broadband Breakfast: SpaceX pays $8B for Grain Management airwaves", "https://broadbandbreakfast.com/earthquake-in-the-sky-spacex-pays-8-billion-for-grain-management-airwaves-to-advance-starlink-mobile/"],
-    ["Benzinga: AT&T, Verizon and T-Mobile tumble on SpaceX deal", "https://www.benzinga.com/markets/tech/26/10/62271617"],
-    ["Neutron Bytes: Nuclear deals roundup, incl. DOE loan to Vistra", "https://neutronbytes.com/2026/10/09/googles-20-year-4-3-billion-deal-with-constellation-to-uprate-11-reactors"],
-    ["TIKR: Vistra rallies on Energy Department nuclear investment", "https://www.tikr.com/blog/vistra-stock-rallies-energy-department-nuclear-investment"],
-    ["FXEmpire: The week ahead, banks and CPI", "https://www.fxempire.com/forecasts/article/the-week-ahead-jpmorgan-goldman-sachs-earnings-and-cpi-test-stock-market-strength-1637135"],
-    ["Akrostec: ASML Q3 results, 14 Oct", "https://www.akrostec.com/indices/KGAIS/events/2026-10-14t00-00-00z-asml-holding-nv-asml-financial-results-7deceb62"]
+    ["Yahoo Finance: Stock market today, Monday 12 Oct", "https://finance.yahoo.com/markets/live/stock-market-today-monday-october-12-dow-sp-500-nasdaq-080321571.html"],
+    ["Bloomberg: Oil rises on Mideast attacks, dollar edges higher (markets wrap, 11 Oct)", "https://www.bloomberg.com/news/articles/2026-10-11/oil-rises-on-mideast-attacks-dollar-edges-higher-markets-wrap"],
+    ["AskTraders: Monday morning markets, finance stocks lift FTSE 100", "https://www.asktraders.com/analysis/monday-morning-markets-finance-stocks-lift-ftse-100-as-hays-pennon-and-aep-slump/"],
+    ["Sunday Guardian: FTSE 100 extends gains to 10,615", "https://sundayguardianlive.com/business/uk-stock-market-today-october-12-why-is-the-uk-stock-market-up-today-ftse-100-extends-gains-to-10615-as-ftse-250-advances-amid-banking-rally-and-falling-oil-prices-check-top-gainers-losers-304028"],
+    ["Trading Economics: Gold", "https://tradingeconomics.com/commodity/gold"],
+    ["NBC News: Trump eases Russia sanctions, says Putin will release diesel (9 Oct)", "https://www.nbcnews.com/business/energy/trump-putin-diesel-prices-rcna602566"],
+    ["Axios: Trump claims Russia and Ukraine agree to energy ceasefire (11 Oct)", "https://www.axios.com/2026/10/11/trump-russia-ukraine-energy-ceasefire-zelensky"],
+    ["CBS News: Strike on Riyadh airport kills at least 12", "https://www.cbsnews.com/news/riyadh-saudi-airport-attack-deaths-injuries/"],
+    ["NBC News: Trump says US could join fight against Houthis", "https://www.nbcnews.com/world/middle-east/saudi-airport-attack-trump-us-join-fight-houthis-rcna602744"],
+    ["investingLive: MUFG sees US CPI at 3.6%; core must surprise to revive an October hike", "https://investinglive.com/news/mufg-us-cpi-seen-at-3-6-core-must-surprise-to-revive-an-october-fed-hike"],
+    ["Admiral Markets: US CPI September 2026 preview", "https://admiralmarkets.com/analytics/traders-blog/us-cpi-preview-september-2026-forecasts-and-the-core-cpi-outlook"],
+    ["CMC Markets: The week ahead (JPMorgan, CPI, TSMC guidance)", "https://www.cmcmarkets.com/en-ie/news-and-analysis/the-week-ahead-us-cpi-eurozone-cpi-jpmorgan-earnings"],
+    ["TSMC investor relations: quarterly results", "https://investor.tsmc.com/quarterly-results"],
+    ["Hargreaves Lansdown: Next week on the stock market, 12 Oct", "https://www.hl.co.uk/shares/share-research/next-week-on-the-stock-market-12-10-2026"],
+    ["Investing.com: Hays shares sink over 11%", "https://uk.investing.com/news/stock-market-news/hays-quarterly-fees-fall-3-as-permanent-recruitment-remains-weak-4904598"],
+    ["Proactive Investors: Hays shares fall despite first-quarter beat", "https://www.proactiveinvestors.com/companies/news/1099949/hays-shares-fall-nearly-10-despite-panmure-backing-after-first-quarter-beat-1099949.html"],
+    ["Breaking Defense: Raytheon up to $6.3B SM-3 IB contract", "https://breakingdefense.com/2026/10/pentagon-raytheon-ink-up-to-6-3-billion-multi-year-contract-for-sm-3-ib-missiles/"],
+    ["Breaking Defense: Boeing nabs potential $14.7B PAC-3 seeker contract", "https://breakingdefense.com/2026/10/boeing-nabs-potential-14-7-billion-pac-3-seeker-contract/"],
+    ["Pharmaphorum: Viatris builds in pain relief with $1.65bn Pacira purchase", "https://pharmaphorum.com/news/viatris-builds-pain-relief-165bn-pacira-purchase"],
+    ["KSL/AP: Viatris to buy Pacira for $1.65 billion", "https://www.ksl.com/article/51633920/viatris-to-buy-pain-therapy-maker-pacira-biosciences-for-165-billion"]
   ]
 };
