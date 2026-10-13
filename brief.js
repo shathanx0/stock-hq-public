@@ -1,73 +1,66 @@
 // Public morning brief: general market only. No portfolio, account or holdings content.
 // Written alongside the private brief.js; build_public.py publishes it as brief.js on the public site and leak-checks it first.
 window.HQ_BRIEF = {
-  date: "2026-10-12",
-  edition: "Monday 12 October 2026 · Morning edition",
-  headline: "A calm start to a big week: oil eases on Trump's Russia 'energy ceasefire' claim, while inflation, bank results and TSMC wait",
-  dek: "US futures are up about 0.1–0.2% and the FTSE 100 is up about 0.6% this morning, near 10,616, led by banks. Brent is slightly lower at about $104.5 after the US eased sanctions on Russian diesel and Trump claimed an energy ceasefire between Russia and Ukraine, though the Houthis struck Riyadh's airport twice over the weekend. Gold is down about 0.4% to around $4,176. Recruiter Hays fell about 11% on weak permanent hiring.",
+  date: "2026-10-13",
+  edition: "Tuesday 13 October 2026 · Morning edition",
+  headline: "China's memory-chip push hits the AI trade: Micron falls 4% and Korea's Kospi drops 5.5%, as bank results open earnings season",
+  dek: "Monday ended flat for the S&P 500 (−0.06%) but the Nasdaq fell 0.44% as chip stocks slid after China's CXMT announced progress on a denser type of DRAM. The sell-off spread to Asia overnight: the Kospi closed down 5.5% after a trading curb, with SK Hynix and Samsung down about 8–9%. London is calmer, with the FTSE 100 up about 0.6% near 10,720. Brent has eased to about $105 and gold is up about 0.5% near $4,194. JPMorgan, Goldman Sachs, Wells Fargo and Citi report before the US open.",
   market: [
-    { k: "S&P 500", v: "7,811.54", d: "+0.59% Fri · futures about +0.1–0.2% Mon morning" },
-    { k: "Nasdaq", v: "27,366.17", d: "+0.64% Fri · Nasdaq-100 futures roughly flat to +0.3%" },
-    { k: "FTSE 100", v: "~10,616", d: "about +0.6% Mon morning · banks lead · Fri close 10,552.05" },
-    { k: "Gold", v: "~$4,176/oz", d: "about −0.4% Mon as oil eases" },
-    { k: "Brent oil", v: "~$104.5", d: "about −0.3% Mon · WTI ~$91.6 · US 10-year 5.24%" }
+    { k: "S&P 500", v: "7,807.24", d: "−0.06% Mon · Dow +0.38% · futures slightly softer Tue" },
+    { k: "Nasdaq", v: "27,245.90", d: "−0.44% Mon · chip index −2.7%" },
+    { k: "FTSE 100", v: "~10,720", d: "about +0.6% Tue morning · Mon close 10,656.28 (+1.0%)" },
+    { k: "Gold", v: "~$4,194/oz", d: "about +0.5% Tue morning" },
+    { k: "Brent oil", v: "~$105", d: "eased Tue after topping $106 Mon · US 10-year just under 5.20%" }
   ],
   sections: [
     {
       title: "The big picture",
       paras: [
-        "There's no fresh US session to report: Friday's rally (S&P 500 +0.59% to 7,811.54, Nasdaq +0.64%) ended a fourth winning week in a row. Over the weekend two things pulled oil in opposite directions. On Friday the US issued a temporary licence allowing Russian diesel to be sold, including into the US, until April 2027, and Russia said it would lift its diesel export ban; on Saturday Trump said Russia and Ukraine had agreed an 'energy ceasefire'. Zelenskiy said Ukraine would accept it but was waiting to hear when it starts, and the Kremlin hadn't confirmed it. Against that, Houthi strikes on Riyadh's main airport killed at least 12 people on Saturday and another hit on Sunday, and Trump suggested the US could join the fight. The net result this morning is Brent a touch lower, at about $104.5.",
-        "Futures are slightly higher and London is up about 0.6%, led by HSBC and Standard Chartered. US bond markets are shut for Columbus Day, but stocks trade. The week's three tests: big US bank results from Tuesday (JPMorgan, Goldman, Citi), September US inflation on Wednesday (forecasts 3.6–3.7% a year, with core prices expected up about 0.2% on the month) and TSMC's results on Thursday. A hot core number could put a Fed rate rise on 28 October back on the table."
+        "Monday was a quiet day for the big indexes but a rough one for chips. The S&P 500 slipped 0.06% to 7,807.24 and the Nasdaq fell 0.44% to 27,245.90, while the Dow rose 0.38% to a third straight gain as money moved into banks and other value stocks ahead of results. The Philadelphia chip index fell about 2.7%. The trigger was China's ChangXin Memory (CXMT), which said it had made key progress on a '4F²' DRAM design that packs more memory cells into the same area, the same approach Samsung and SK Hynix are chasing. It plans to ship server memory using it by the end of 2026. Several analysts noted the sell-off also reflects profit-taking after a huge run in memory stocks this year.",
+        "Asia took the news harder overnight. South Korea's Kospi closed down 5.5% after falling more than 7% at one point and briefly below 6,000, and Japan's Nikkei lost over 2%. London is shrugging it off: the FTSE 100 is up about 0.6% near 10,720, led by Whitbread, WPP and Diageo. Oil has eased, with Brent around $105, after briefly topping $106 on Monday on Middle East tensions. Today the big US banks open earnings season, and Fed Governor Waller speaks. Wednesday's US inflation figure (forecast around 3.6% a year) matters most for whether the Fed raises rates again on 28 October."
       ]
     },
     {
       title: "Stocks in the news",
       items: [
-        { t: "HAS.L", h: "Hays fell about 11% after first-quarter fees dropped 3% and it saw no near-term recovery.", b: "Net fees fell 3% like-for-like, slightly better than the 4% analysts expected, but permanent hiring fees were down 7%, with Germany down 6% and the UK down 5%. The company has saved £10 million of its £50 million cost-cutting target so far. Recruiters are often an early read on the jobs market." },
-        { t: "PNN.L", h: "Pennon (South West Water) fell about 10% after two brokers downgraded it.", b: "RBC cut it to sector perform on Friday with a 400p target (from 575p), citing a tougher outlook for returns over the current regulatory period, and Deutsche Bank also cut it to hold, with a 380p target (from 550p)." },
-        { t: "JPM", h: "JPMorgan kicks off bank results on Tuesday, with earnings expected up about 16%.", b: "Analysts expect third-quarter earnings of about $5.90 a share on revenue near $51.3 billion, and options pricing implies a move of about 3.3% either way. Banks tend to set the tone for the earnings season." },
-        { t: "TSM", h: "TSMC reports on Thursday, the week's big test of AI chip demand.", b: "It guided to $44.6–45.8 billion of revenue for the quarter with a 65–67% gross margin. Its outlook will be read across the whole chip sector." }
+        { t: "MU", h: "Micron fell 3.9% to $989.21 after China's CXMT flagged progress on next-generation DRAM.", b: "CXMT says its 4F² design improves density and energy efficiency and that server modules using it will ship by the end of 2026, though it hasn't given specifications, production volumes or customers. Sandisk fell about 6% in sympathy. Analysts point out Chinese makers still lag in the most advanced memory used in AI chips (HBM), so the threat looks gradual rather than immediate." },
+        { t: "META", h: "Meta rose 3.4% to $742.96 after launching its Muse AI models.", b: "It was one of the few big tech gainers on a day when money rotated out of chips. Meta is selling the models through monthly subscription tiers, a sign it wants direct revenue from AI as well as advertising." },
+        { t: "000660.KS", h: "SK Hynix and Samsung fell about 8–9% in Seoul as foreign investors sold.", b: "The two memory giants make up a large part of the Kospi, which triggered its first sell-side trading curb in about two months. Memory makers had been among the biggest winners of the AI boom, which is why one competitor's announcement moved them so much." },
+        { t: "WTB.L", h: "Whitbread (Premier Inn) rose about 2.6% despite a 62% drop in half-year pre-tax profit.", b: "Revenue rose 2% to £1.57 billion and profit fell to £109 million. It also urged shareholders to reject activist investor Corvex's push for a board seat and strategy changes." }
       ]
     },
     {
       title: "Deals and catalysts worth researching",
       intro: "Deals with concrete numbers. None of these guarantees a profit: big news is often priced in within hours, and the payoff can take years.",
       items: [
-        { t: "RTX", h: "Raytheon: up to $6.3B multi-year Pentagon deal for SM-3 Block IB missile interceptors (8 Oct)", b: "The base contract is $4.4 billion over five years, with about $2 billion more in options. It adds to recent Raytheon deals worth $24.4 billion (SM-6) and $22.9 billion (Tomahawk), part of a push to rebuild missile stocks." },
-        { t: "BA", h: "Boeing: up to $14.7B to boost production of Patriot PAC-3 interceptor seekers (5 Oct)", b: "It is an 'undefinitized' contract, meaning the final terms and price are still to be agreed, so the headline number is a ceiling rather than guaranteed revenue." },
-        { t: "VTRS", h: "Viatris to buy Pacira BioSciences for $1.65B, $36.50 a share in cash (8 Oct)", b: "That's a 44.8% premium; Pacira jumped about 44% and Viatris slipped about 2%, the usual pattern where the buyer pays up. Pacira made about $746 million of revenue in the year to June. Closing is expected by the end of 2026." }
+        { t: "IONQ", h: "IonQ agreed to buy cybersecurity firm Elisity in an all-stock deal worth up to $1.3 billion.", b: "The price includes up to $150 million of performance-based earnouts, and the deal is expected to close in the fourth quarter. IonQ wants to pair its post-quantum encryption with Elisity's 'zero trust' network security; it's the company's fourth acquisition this year. The shares fell about 9% on the day, a reminder that paying in stock dilutes existing shareholders." },
+        { t: "SPCX", h: "SpaceX agreed to buy a nationwide block of 800 MHz mobile spectrum to turn Starlink Mobile into a US carrier.", b: "The deal with Grain Management needs FCC approval; reports put it at about $8 billion, but terms weren't disclosed. AT&T, Verizon and T-Mobile fell about 5–7% on Friday on the news, while Morgan Stanley expects any threat to the big carriers to build gradually, starting in rural areas." }
       ]
     }
   ],
   calendar: [
-    { d: "Mon 12 Oct", e: "US Columbus Day: stocks open, bond market closed · Hays results" },
-    { d: "Tue 13 Oct", e: "Q3 bank results: JPMorgan, Goldman Sachs, Citi · UK: BP trading update, Rio Tinto output, Whitbread, Bellway" },
-    { d: "Wed 14 Oct", e: "US CPI inflation (Sept), 1:30pm UK, forecast 3.6–3.7% y/y · ASML results · Bank of America, Morgan Stanley" },
-    { d: "Thu 15 Oct", e: "TSMC Q3 results, 7pm UK · US PPI and retail sales (Sept) · UK GDP (Aug), date per calendars" },
-    { d: "Fri 16 Oct", e: "Man Group update · US industrial production (Sept)" },
-    { d: "Later", e: "UK jobs data 20 Oct · Fed decision 28 Oct · UK Budget 28 Oct · US midterms 3 Nov · Bank of England 5 Nov" }
+    { d: "Tue 13 Oct", e: "Bank results: JPMorgan, Goldman Sachs, Wells Fargo, Citi · UnitedHealth, Johnson & Johnson · Fed Governor Waller speaks" },
+    { d: "Wed 14 Oct", e: "US CPI inflation (Sept), 1:30pm UK, forecast about 3.6% a year · ASML results · Bank of America, Morgan Stanley, BlackRock" },
+    { d: "Thu 15 Oct", e: "TSMC Q3 results · US PPI, retail sales and jobless claims · Charles Schwab" },
+    { d: "Fri 16 Oct", e: "Euro-area final inflation (Sept) · US industrial production · Travelers" },
+    { d: "Later", e: "Fed decision 28 Oct · UK Budget 28 Oct · US midterms 3 Nov · Bank of England 5 Nov" }
   ],
-  bottomLine: "Today is quiet; Wednesday's US inflation figure is the one that matters. If core prices rise faster than the 0.2% expected, talk of a Fed rate rise on 28 October will return, and with the 10-year yield already at 5.24%, that would test a market sitting near its record.",
+  bottomLine: "The AI chip trade has had its biggest wobble in weeks, and it comes just before ASML (Wednesday) and TSMC (Thursday) report. Their outlooks, plus Wednesday's US inflation figure, will show whether this was a blip or the start of a bigger reset.",
   sources: [
-    ["Yahoo Finance: Stock market today, Monday 12 Oct", "https://finance.yahoo.com/markets/live/stock-market-today-monday-october-12-dow-sp-500-nasdaq-080321571.html"],
-    ["Bloomberg: Oil rises on Mideast attacks, dollar edges higher (markets wrap, 11 Oct)", "https://www.bloomberg.com/news/articles/2026-10-11/oil-rises-on-mideast-attacks-dollar-edges-higher-markets-wrap"],
-    ["AskTraders: Monday morning markets, finance stocks lift FTSE 100", "https://www.asktraders.com/analysis/monday-morning-markets-finance-stocks-lift-ftse-100-as-hays-pennon-and-aep-slump/"],
-    ["Sunday Guardian: FTSE 100 extends gains to 10,615", "https://sundayguardianlive.com/business/uk-stock-market-today-october-12-why-is-the-uk-stock-market-up-today-ftse-100-extends-gains-to-10615-as-ftse-250-advances-amid-banking-rally-and-falling-oil-prices-check-top-gainers-losers-304028"],
-    ["Trading Economics: Gold", "https://tradingeconomics.com/commodity/gold"],
-    ["NBC News: Trump eases Russia sanctions, says Putin will release diesel (9 Oct)", "https://www.nbcnews.com/business/energy/trump-putin-diesel-prices-rcna602566"],
-    ["Axios: Trump claims Russia and Ukraine agree to energy ceasefire (11 Oct)", "https://www.axios.com/2026/10/11/trump-russia-ukraine-energy-ceasefire-zelensky"],
-    ["CBS News: Strike on Riyadh airport kills at least 12", "https://www.cbsnews.com/news/riyadh-saudi-airport-attack-deaths-injuries/"],
-    ["NBC News: Trump says US could join fight against Houthis", "https://www.nbcnews.com/world/middle-east/saudi-airport-attack-trump-us-join-fight-houthis-rcna602744"],
-    ["investingLive: MUFG sees US CPI at 3.6%; core must surprise to revive an October hike", "https://investinglive.com/news/mufg-us-cpi-seen-at-3-6-core-must-surprise-to-revive-an-october-fed-hike"],
-    ["Admiral Markets: US CPI September 2026 preview", "https://admiralmarkets.com/analytics/traders-blog/us-cpi-preview-september-2026-forecasts-and-the-core-cpi-outlook"],
-    ["CMC Markets: The week ahead (JPMorgan, CPI, TSMC guidance)", "https://www.cmcmarkets.com/en-ie/news-and-analysis/the-week-ahead-us-cpi-eurozone-cpi-jpmorgan-earnings"],
-    ["TSMC investor relations: quarterly results", "https://investor.tsmc.com/quarterly-results"],
-    ["Hargreaves Lansdown: Next week on the stock market, 12 Oct", "https://www.hl.co.uk/shares/share-research/next-week-on-the-stock-market-12-10-2026"],
-    ["Investing.com: Hays shares sink over 11%", "https://uk.investing.com/news/stock-market-news/hays-quarterly-fees-fall-3-as-permanent-recruitment-remains-weak-4904598"],
-    ["Proactive Investors: Hays shares fall despite first-quarter beat", "https://www.proactiveinvestors.com/companies/news/1099949/hays-shares-fall-nearly-10-despite-panmure-backing-after-first-quarter-beat-1099949.html"],
-    ["Breaking Defense: Raytheon up to $6.3B SM-3 IB contract", "https://breakingdefense.com/2026/10/pentagon-raytheon-ink-up-to-6-3-billion-multi-year-contract-for-sm-3-ib-missiles/"],
-    ["Breaking Defense: Boeing nabs potential $14.7B PAC-3 seeker contract", "https://breakingdefense.com/2026/10/boeing-nabs-potential-14-7-billion-pac-3-seeker-contract/"],
-    ["Pharmaphorum: Viatris builds in pain relief with $1.65bn Pacira purchase", "https://pharmaphorum.com/news/viatris-builds-pain-relief-165bn-pacira-purchase"],
-    ["KSL/AP: Viatris to buy Pacira for $1.65 billion", "https://www.ksl.com/article/51633920/viatris-to-buy-pain-therapy-maker-pacira-biosciences-for-165-billion"]
+    ["Motley Fool: Stock market today, Oct. 12 (Dow gains as memory stocks weigh on Nasdaq)", "https://www.fool.com/coverage/stock-market-today/2026/10/12/stock-market-today-oct-12-dow-gains-as-memory-stocks-weigh-on-nasdaq/"],
+    ["Vista Partners: Stock market today, October 12, 2026", "https://vistapglobal.com/stock-market-today-october-12-2026-bull-celebrates-4th-birthday-as-dow-gains-nasdaq-slips-and-crude-oil-rises-ahead-of-inflation-data-asts-crm-docs-gs-eprx-ionq-jmp-meta-modd-ms-mu/"],
+    ["Saxo: Morning Brew, 13 October 2026", "https://home.saxo/en-ch/content/articles/morning-brew/morning-brew-october-13-2026-13102026"],
+    ["Saxo: Market Quick Take, 13 October 2026", "https://www.home.saxo/content/articles/macro/market-quick-take---korean-chip-stocks-tumble-as-us-bank-earnings-begin---13-october-2026-13102026"],
+    ["Proactive: Markets live, FTSE edges higher despite Asian tech sell-off", "https://proactiveinvestors.com/companies/news/1099993/markets-live-ftse-set-to-edge-higher-despite-asian-technology-sell-off-1099993.html"],
+    ["BigGo Finance: Micron down 3.9% as CXMT advances in memory tech", "https://finance.biggo.com/news/fe4fb088-266f-45df-8c2d-3eb1d215190f"],
+    ["Korea JoongAng Daily: Global chip stocks tumble as CXMT unveils next-gen DRAM plans", "https://www.koreajoongangdaily.com/business/global-chip-stocks-tumble-as-chinas-cxmt-unveils-nextgeneration-dram-plans/12917865"],
+    ["TradingKey: CXMT 4F² DRAM progress", "https://www.tradingkey.com/analysis/stocks/us-stocks/262213148-cxmt-4f2-dram-threat-samsung-sk-hynix-kioxia-tradingkey"],
+    ["KED Global: Kospi tumbles as chip rout deepens", "https://www.kedglobal.com/korean-stock-market/newsView/ked202610130001"],
+    ["Investing.com: Asia stocks slide as China chip threat hits Samsung, SK Hynix", "https://in.investing.com/news/stock-market-news/asia-stocks-slide-as-china-chip-threat-hits-samsung-sk-hynix-oil-retreats-5629461"],
+    ["IonQ: IonQ to acquire Elisity", "https://www.ionq.com/news/ionq-to-acquire-elisity-to-accelerate-zero-trust-for-the-quantum-era"],
+    ["CNBC: IonQ to acquire Elisity for up to $1.3 billion", "https://www.cnbc.com/2026/10/12/ionq-elisity-acquisition-cybersecurity.html"],
+    ["HDFC Sky: IonQ falls 9.25% on $1.3 billion deal", "https://hdfcsky.com/news/cryo-cell-jumps-9-61percent-on-earnings-beat-euro-tech-surges-37-37percent-on-norway-jv-ionq-falls-9-25percent-on-1-3-billion-deal"],
+    ["The Star/Reuters: Telecom stocks slide as SpaceX spectrum deal rattles sector", "https://www.thestar.com.my/tech/tech-news/2026/10/09/us-european-telecom-stocks-slide-as-spacex-spectrum-deal-rattles-sector"],
+    ["Admiral Markets: US CPI preview, September 2026", "https://admiralmarkets.com/analytics/traders-blog/us-cpi-preview-september-2026-forecasts-and-the-core-cpi-outlook"]
   ]
 };
