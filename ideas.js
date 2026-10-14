@@ -13,6 +13,7 @@ window.HQ_IDEAS = {
       bear: "If AI turns 'good enough' creative work into a free feature, seat counts at small businesses and hobbyists could erode faster than enterprise gains replace them. Net new ARR already fell about 36% year on year in Q3 FY26 (management blames a deliberate freemium push). The incoming CEO comes from the marketing-software side, not the creative products.",
       watch: "Net new ARR each quarter and the FY27 ending-ARR guide in December; Firefly paid conversion.",
       catalysts: [
+        { d: "13 Oct 2026", e: "Update: HSBC downgraded to Hold (target $267 from $310) on open-source AI competition, a day after Wells Fargo moved to Underweight ($225). Stock about $236", url: "https://benzinga.com/analyst-stock-ratings/downgrades/26/10/62323583/this-adobe-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-tuesday" },
         { d: "1–2 Oct 2026", e: "Update: still near its 52-week low (about $238, down about 31% this year) after five straight earnings beats. DA Davidson kept its Buy and raised its target to $290, but the Street is mostly sceptical (23 Holds against 5 Sells). Firefly ARR grew 40% quarter on quarter", url: "https://247wallst.com/investing/2026/10/02/the-adobe-stock-debate-is-about-to-get-interesting/" },
         { d: "28–30 Oct 2026", e: "Adobe MAX: new Firefly models, agents and pricing aimed at converting 100M+ free creative users", url: "https://convcast.com/event/adobe-max-2026/" },
         { d: "1 Dec 2026", e: "Anil Chakravarthy (internal, announced 2 Sept) becomes CEO; Narayen moves to Executive Chair", url: "https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo" },
@@ -253,6 +254,7 @@ window.HQ_IDEAS = {
       bear: "If US insurance volumes keep shrinking and RB Global keeps winning share, Copart is a no-growth company, and 17× earnings isn't cheap for that. ACV is a lower-margin business with integration risk. Rising cost per car is already squeezing margins. A stock that used to trade at a premium can stay re-rated lower for years.",
       watch: "US insurance unit volumes turning positive, and gross margin holding above about 42%.",
       catalysts: [
+        { d: "13 Oct 2026", e: "Update: 52-week low (previous close $26.48, below the $27.22 flagged price); the ACV Auctions deal is still in antitrust review", url: "https://marketbeat.com/instant-alerts/price-copart-nasdaq-cprt-reaches-new-52-week-low-should-you-sell-2026-10-13" },
         { d: "~19 Nov 2026", e: "Q1 FY27 results (estimated date)", url: "https://finance.yahoo.com/markets/stocks/articles/copart-inc-cprt-q4-2026-090100470.html" },
         { d: "By end-2026", e: "ACV Auctions acquisition closes ($10.50 per share in cash, about $1.9B; tender offer under way)", url: "https://www.insurancejournal.com/news/east/2026/09/14/884939.htm" },
         { d: "Ongoing", e: "Insurance premiums: if premium inflation cools, more drivers keep collision cover and volumes recover", url: "https://www.investing.com/news/analyst-ratings/copart-stock-downgraded-by-hsbc-on-weak-insurance-volumes-93CH-4904840" }
