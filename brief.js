@@ -1,73 +1,82 @@
 // Public morning brief: general market only. No portfolio, account or holdings content.
 // Written alongside the private brief.js; build_public.py publishes it as brief.js on the public site and leak-checks it first.
 window.HQ_BRIEF = {
-  date: "2026-10-15",
-  edition: "Thursday 15 October 2026 · Morning edition",
-  headline: "Hot US inflation hits tech: the Nasdaq falls 1.9% and the AI sell-off spreads to Asia, even as TSMC posts a record profit",
-  dek: "US prices rose 3.7% in the year to September, above the 3.6% forecast, and bets on a Fed rate rise jumped. The Nasdaq fell 1.88% and the S&P 500 1.11%, led by AI-infrastructure names such as Oracle and CoreWeave. Overnight Korea's chip giants fell 7–10% before TSMC reported a record quarter and raised its outlook. In London, UK growth beat forecasts and the FTSE 100 is up about 0.4%, led by defensive stocks. Gold is near $4,080 and Brent has eased to about $104.",
+  date: "2026-10-16",
+  edition: "Friday 16 October 2026 · Morning edition",
+  headline: "Money rotates out of AI and into the rest of the market: the Dow jumps 1.1% while the Nasdaq barely moves, despite the biggest US producer-price jump in four and a half years",
+  dek: "US producer prices rose 1.3% in September against a 0.5% forecast, a day after a hot consumer-price figure, yet stocks held up: the Dow rose 1.08%, small caps 1.4% and the S&P 500 0.33%, while the Nasdaq finished flat after recovering from early losses. Fed Chair Kevin Warsh gave no guidance on rates overnight, and Asian chip stocks bounced. The FTSE 100 is flat this morning after closing at a five-week high, and gold has recovered to around $4,170.",
   market: [
-    { k: "S&P 500", v: "7,718.94", d: "−1.11% Wed · Dow −0.1%" },
-    { k: "Nasdaq", v: "26,692.87", d: "−1.88% Wed · biggest fall since July" },
-    { k: "FTSE 100", v: "~10,765", d: "about +0.4% Thu morning · Wed close 10,724.86" },
-    { k: "Gold", v: "~$4,083/oz", d: "−1.9% Wed after the inflation figure" },
-    { k: "US inflation", v: "3.7%", d: "Sept CPI, forecast 3.6% · core 2.6% vs 2.5%" }
+    { k: "S&P 500", v: "7,744.06", d: "+0.33% Thu · Dow +1.08% to 52,177.69" },
+    { k: "Nasdaq", v: "26,713.02", d: "+0.08% Thu · down about 3% this week" },
+    { k: "FTSE 100", v: "~10,830", d: "about −0.1% Fri morning · Thu close 10,840.35 (+1.08%)" },
+    { k: "Gold", v: "~$4,170/oz", d: "+1.3% Thu as the dollar slipped · higher again Fri" },
+    { k: "US producer prices", v: "6.3%", d: "Sept PPI y/y, forecast 5.3% · Oct Fed hike odds ~27–34%" }
   ],
   sections: [
     {
       title: "The big picture",
       paras: [
-        "Wednesday's inflation figure was the one markets feared. US consumer prices rose 0.6% in September and 3.7% over the year, up from 3.4% in August and above the 3.6% forecast; core inflation, which leaves out food and energy, was 2.6% against 2.5% expected. Treasury yields rose, and futures now put a meaningful chance (estimates range from about 30% to 46%) on a Fed rate rise on 28 October, with a December rise close to fully priced. The S&P 500 fell 1.11% to 7,718.94 and the Nasdaq 1.88% to 26,692.87, while the Dow slipped only 0.1%. Technology was the worst sector, down about 3%; healthcare and consumer staples rose more than 2%.",
-        "The selling centred on companies borrowing heavily to build AI data centres. Oracle fell 8.8%, CoreWeave about 15% and Nebius about 10%, as the cost of insuring their debt rose to records. That spread to Asia overnight: SK Hynix fell more than 10% and Samsung roughly 7–10%, and European chipmakers opened lower. TSMC then reported a record quarter and raised its full-year outlook, a reminder that the worry right now is the cost of financing AI, not demand for chips. In the UK, the economy grew 0.1% in August against forecasts of a small fall; the pound rose and gilt yields eased. Gold dropped about 1.9% to near $4,083 as higher rate expectations lifted the dollar, and Brent eased about 2% to around $104."
+        "Thursday brought a second hot inflation figure: producer prices, what businesses charge each other, rose 1.3% in September and 6.3% over the year, against forecasts of 0.5% and 5.3%. Core producer prices rose 5%, the biggest gain in about four years, and retail sales rose 0.8%, well above the 0.3% forecast. Yet the market didn't repeat Wednesday's sell-off. Treasury yields fell to a three-week low and the dollar slipped about 0.5%, and investors moved money out of AI and chip stocks into consumer, defensive and smaller companies. The Dow rose 1.08% to 52,177.69, the Russell 2000 of small caps 1.38%, and the S&P 500 0.33% to 7,744.06. The Nasdaq ended up 0.08% at 26,713.02 after being down about 1.5% at its low.",
+        "Futures put roughly a 27–34% chance on a Fed rate rise on 28 October and more than 90% on one by December. Speaking in Bangkok overnight, Fed Chair Kevin Warsh described AI as a boost to productivity and gave no guidance on rates, which markets took as a relief: Japan's Nikkei rose 1.4% and Korea's Kospi 2.1% as Asian tech stocks recovered some of the week's losses. In London the FTSE 100 closed at a five-week high of 10,840.35 on Thursday and is broadly flat this morning, with banks lower on talk of higher bank taxes in the 28 October Budget. Gold rose 1.3% on Thursday to about $4,157 as yields and the dollar eased, and edged higher again overnight; oil is still around $105 a barrel on Middle East tensions."
       ]
     },
     {
       title: "Stocks in the news",
       items: [
-        { t: "TSM", h: "TSMC posted a record profit for a sixth straight quarter and guided to up to 61% sales growth next quarter.", b: "Net profit was NT$763 billion (about $23.6 billion), up 68.7% on a year earlier and ahead of the NT$746 billion forecast, on a 66.4% gross margin. It expects $52.3–54.3 billion of fourth-quarter sales and now sees 2026 revenue growth of about 44%. Management was more cautious on 2027, saying it would plan prudently because of economic uncertainty. Its shares had already fallen in the chip sell-off before the results." },
-        { t: "ORCL", h: "Oracle fell 8.8% to $130.55 as higher yields revived worries about debt-funded AI building.", b: "The cost of insuring Oracle's and CoreWeave's debt against default rose to record highs, and CoreWeave's 2032 bonds yielded about 14.8%. CoreWeave's chief executive called the move irrational, pointing to its order backlog. The question for investors is whether higher rates slow the data-centre build, not whether demand for AI has gone." },
-        { t: "BAC", h: "Bank of America fell almost 5% after a $1.2 billion penalty and a revenue miss; Morgan Stanley beat but still fell about 3%.", b: "Bank of America's profit fell 17% to $6.93 billion, or $1.08 a share excluding the charge, and revenue was about $570 million below forecasts on weaker trading. Morgan Stanley earned $3.03 a share on $20.34 billion of revenue, both ahead of forecasts, with equities trading up 41%, but fixed-income trading fell." },
-        { t: "RKLB", h: "Rocket Lab fell 7.9% to $59.18, then dropped further after hours as it delayed its Neutron rocket to 2027.", b: "The first launch had been targeted for the fourth quarter of 2026. The company blamed manufacturing defects in a propellant tank dome on the first stage and said a new dome and full inspection will be finished before the first quarter. Neutron was first meant to fly in 2024. Barclays started coverage at Overweight with an $85 target on 8 October." }
+        { t: "INTU", h: "Intuit rose 6.4% to $330.17 after agreeing to buy Sequence, an AI revenue-automation start-up.", b: "The deal adds automated billing and revenue tools to Intuit's small-business software; terms weren't disclosed in the coverage, and analysts said the payoff depends on integration and customer take-up. The shares are still down about half this year as investors worry AI will erode software pricing, which is why a bounce like this can be sharp." },
+        { t: "NKE", h: "Nike rose about 5% and Lululemon about 4% as investors rotated into beaten-down consumer names.", b: "There was no new company news: the move came from money leaving AI and tech. Consumer staples were the best sector of the week, up about 3.7%, with Coca-Cola and Kimberly-Clark also strong. Nike had fallen more than 10% after missing revenue forecasts earlier this month." },
+        { t: "RKLB", h: "Rocket Lab fell another 6.6% to $55.25 as analysts cut targets after its Neutron rocket slipped to 2027.", b: "It had been down as much as 16% during the day. KeyBanc cut its target to $100 from $135 and Goldman to $67 from $75; Cantor kept $122. The company blamed a defect in how a propellant tank dome was made and says it has been fixed. The stock is about 65% below its May high." },
+        { t: "ASML", h: "ASML says chipmakers are already booking machines for 2029 and 2030, and that 2027–28 capacity won't fully meet demand.", b: "It expects 2026 sales of €44–45 billion at about a 56% gross margin. The supply warning weighed on chip designers such as Broadcom on Thursday, since it hints at tight factory capacity for years." }
       ]
     },
     {
       title: "Deals and catalysts worth researching",
       intro: "Deals and dated events with concrete numbers. None of these guarantees a profit: big news is often priced in within hours, and the payoff can take years.",
       items: [
-        { t: "IONQ", h: "IonQ priced a $2 billion share sale days after agreeing an all-stock deal for Elisity worth up to $1.3 billion.", b: "The two together mean significant dilution for existing shareholders, and the stock fell about 9.5% on Wednesday, dragging other quantum names with it. The Elisity deal, a cybersecurity company, is expected to close in the fourth quarter." },
-        { t: "IRDM", h: "Rocket Lab's $8 billion takeover of Iridium is in US regulatory review, with FCC comments due today.", b: "Iridium shareholders approved the deal with about 99.6% of votes cast; each share becomes $27 in cash plus Rocket Lab stock within a collar. Oppositions are due on 30 October and replies on 9 November, and the deal is expected to close in mid-2027." },
-        { t: "TSM", h: "TSMC's 2026 capital spending is reported at $60–65 billion, a dated signal for chip-equipment makers.", b: "Sources differ slightly on the exact range. Last week ASML said demand for its machines would outrun supply in 2027 and 2028; TSMC's more cautious 2027 tone is the counterweight to watch." }
+        { t: "GFS", h: "GlobalFoundries will run two new New York chip plants funded by Japan with up to $21 billion, and the US will take a 4% stake.", b: "Japan provides the money under its $550 billion US investment pledge; GlobalFoundries earns fees for building, running and licensing technology to the plants. The first, about $10 billion, is due online in 2029. US government ownership rises to about 7%. The shares rose about 5% on the news on Wednesday." },
+        { t: "RTX", h: "Raytheon won a sole-source US Air Force contract worth up to $8 billion to modernise nuclear command communications, running to about 2036.", b: "The figure is a ceiling, not committed money: only $800,000 has been obligated so far. It follows a $24.4 billion multi-year SM-6 interceptor contract on 1 October and $729 million of counter-drone awards on 13 October." },
+        { t: "NVDA", h: "Nvidia's Jensen Huang announced plans to invest another $2 billion in European AI deals, including four French start-ups.", b: "The named companies are Doctolib, Genesis AI, Pigment and Entalpic. Investments like this tend to deepen demand for Nvidia's own chips. Deal sizes for each start-up weren't given in the coverage." }
       ]
     }
   ],
   calendar: [
-    { d: "Thu 15 Oct", e: "TSMC results (out) · UK GDP (out, +0.1%) · US PPI, retail sales and jobless claims" },
-    { d: "Fri 16 Oct", e: "Euro-area final inflation · US industrial production · Travelers, Truist" },
-    { d: "Mon 19 Oct", e: "Earnings season continues" },
-    { d: "Tue 20 Oct", e: "Netflix results (after the US close) · GE Aerospace, RTX, Philip Morris this week" },
-    { d: "Wed 21 Oct", e: "Tesla results expected (some calendars say 28 Oct; not yet confirmed)" },
-    { d: "Later", e: "Fed decision 28 Oct · UK Budget 28 Oct · AMD and Booking results 3 Nov · US midterms 3 Nov · Bank of England 5 Nov" }
+    { d: "Fri 16 Oct", e: "US industrial production · Travelers, Truist, Regions, M&T, Citizens results · Apple foldable pre-orders open" },
+    { d: "Mon 19 Oct", e: "China Q3 GDP · Texas Instruments results (expected, after US close)" },
+    { d: "Tue 20 Oct", e: "US housing starts · Netflix and United Airlines results (after US close) · GE Aerospace this week" },
+    { d: "Wed 21 Oct", e: "UK September inflation (7am; August was 3.1%) · Tesla results expected (date not confirmed) · IBM, Lam Research" },
+    { d: "Thu 22 Oct", e: "US jobless claims · Intuitive Surgical, Abbott this week" },
+    { d: "Later", e: "US flash PMIs 23 Oct · Fed decision 28 Oct · UK Budget 28 Oct · AMD results 3 Nov · US midterms 3 Nov · Bank of England 5 Nov" }
   ],
-  bottomLine: "The market's problem this week isn't AI demand, which TSMC's numbers say is still strong; it's the price of money. With inflation at 3.7% and a Fed rise back on the table, companies that borrow heavily to build data centres are being repriced fastest, and today's US PPI and retail sales will test that mood.",
+  bottomLine: "Two hot inflation figures in two days didn't sink the market; they moved it. Money is leaving the most expensive AI names for consumer, defensive and smaller companies, and with a Fed rise now a live possibility for 28 October, next week's UK inflation figure and the first big tech results (Netflix, Tesla) will show whether that rotation continues.",
   sources: [
-    ["TheStreet: Stock market today, Oct. 14, 2026", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-14-2026"],
-    ["Yahoo Finance: Hot inflation report drops tech (live, 14 Oct)", "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-14-dow-sp-500-nasdaq-081136597.html"],
-    ["Yahoo Finance: Oracle tumbles on hotter CPI data", "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-14-211246271.html"],
-    ["FXStreet: Gold slumps to near $4,100 as hotter US CPI increases Fed hike odds", "https://www.fxstreet.com/news/gold-slumps-to-near-4-100-as-hotter-us-cpi-increases-fed-rate-hike-odds-202610142323"],
-    ["Mitrade: Gold crashes below $4,100 as hot CPI revives October hike bets", "https://mitrade.com/au/insights/news/live-news/article-2-2163371-20261015"],
-    ["Trading Economics: Brent crude", "https://tradingeconomics.com/commodity/brent-crude-oil"],
-    ["CNBC: TSMC posts record profit for a sixth straight quarter", "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html"],
-    ["Crypto Briefing: TSMC forecasts Q4 revenue jump of up to 61%", "https://cryptobriefing.com/tsmc-q4-revenue-forecast-record-q3-profit/"],
-    ["CNBC: Global tech rout on AI funding worries, 15 Oct", "https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html"],
-    ["Investing.com: European chipmakers tumble as inflation data fuels rate-hike fears", "https://in.investing.com/news/stock-market-news/european-chipmakers-tumble-as-inflation-data-fuels-ratehike-fears-ai-rout-5634348"],
-    ["Quartz: CoreWeave stock drops as bond yields rise on AI debt concerns", "https://qz.com/coreweave-stock-bond-yields-ai-debt-101426"],
-    ["CNBC: Bank of America Q3 2026 earnings", "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html"],
-    ["Startup Fortune: Morgan Stanley beats on trading while Bank of America misses on a fine", "https://startupfortune.com/morgan-stanley-beats-big-on-trading-while-bank-of-america-misses-on-a-fine/"],
-    ["Reuters via Investing.com: Rocket Lab pushes Neutron debut to 2027", "https://www.investing.com/news/stock-market-news/rocket-lab-pushes-neutron-rockets-debut-flight-to-2027-shares-fall-4950171"],
-    ["Yahoo Finance: RKLB slides after hours as Neutron slips into 2027", "https://finance.yahoo.com/markets/stocks/articles/rklb-stock-slides-8-hours-222312268.html"],
-    ["Yahoo Finance: IonQ falls as $2B equity offering follows Elisity deal", "https://finance.yahoo.com/markets/stocks/articles/ionq-falls-6-2b-equity-134408968.html"],
-    ["SDxCentral: Iridium $8B takeover gets stockholder approval", "https://www.sdxcentral.com/news/iridium-8b-takeover-gets-stockholder-approval/"],
-    ["CNBC: UK economy grew 0.1% in August", "https://www.cnbc.com/2026/10/15/uk-gdp-august-2026-economy.html"],
-    ["Proactive: Markets live, FTSE 100 rebounds as tobacco offsets mining sell-off", "https://www.proactiveinvestors.com/companies/news/1100139/markets-live-ftse-100-set-to-open-lower-as-global-tech-sell-off-deepens-1100139.html"],
-    ["Wall Street Horizon: Netflix earnings date", "https://www.wallstreethorizon.com/netflix-earnings-calendar"]
+    ["TheStreet: Stock market today, Oct. 15, 2026", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026"],
+    ["TS2: Dow jumps 1.1%, Russell 2000 rises 1.4% as broad rotation beats tech", "https://ts2.tech/en/dow-jumps-1-1-russell-2000-rises-1-4-as-broad-rotation-beats-tech/"],
+    ["Pomegra: Dow gains 1% as money leaves AI trade", "https://pomegra.io/news/stock-market-today-dow-gains-1-as-money-leaves-ai-trade"],
+    ["Schwab: Stocks slip early after wholesale inflation surges", "https://www.schwab.com/learn/story/stock-market-update-open"],
+    ["CNBC: Gold rebounds on weaker dollar, yields; October Fed hike bets subdued", "https://www.cnbc.com/2026/10/15/gold-rebounds-from-one-week-low-as-dollar-slips.html"],
+    ["Forbes: Gold rebounds as Treasury yields and dollar fall", "https://www.forbes.com/sites/conormurray/2026/10/15/gold-rebounds-from-steep-losses-as-treasury-yields-and-us-dollar-fall/"],
+    ["Swissinfo/Bloomberg: Asian stocks rise, US futures gain after Warsh", "https://www.swissinfo.ch/eng/asian-stocks-rise,-us-futures-gain-after-warsh:-markets-wrap/92225060"],
+    ["FXStreet: Warsh gives little away despite hotter inflation prints", "https://www.fxstreet.com/analysis/warsh-gives-little-away-despite-hotter-inflation-prints-202610160600"],
+    ["Asia Business Daily: Warsh remarks lift Nasdaq futures; Asian stocks rally", "https://www.asiae.co.kr/en/article/world-stockmarket/2026101614305673083"],
+    ["Trading Economics: UK stock market", "https://tradingeconomics.com/united-kingdom/stock-market"],
+    ["Yahoo Finance UK: Markets live, FTSE 100", "https://uk.finance.yahoo.com/news/markets-live-ftse-100-set-060300466.html"],
+    ["CNBC: Friday's big stock stories", "https://www.cnbc.com/2026/10/15/fridays-big-stock-stories-whats-likely-to-move-the-market.html"],
+    ["Benzinga: Intuit bets on AI revenue automation with Sequence acquisition", "https://www.benzinga.com/m-a/26/10/62391226/intuit-bets-on-ai-powered-revenue-automation-with-sequence-acquisition"],
+    ["GuruFocus: Intuit after 6.4% gain", "https://www.gurufocus.com/news/9126573/a-look-at-intuit-inc-intu-after-64-gain-gf-value-83199-vs-price-33017"],
+    ["24/7 Wall St.: Nike climbs 5% as beaten-down consumer names catch a bid", "https://247wallst.com/investing/2026/10/15/nike-climbs-5-as-beaten-down-consumer-names-catch-a-bid-lululemon-rises-4-on-holding-dips/"],
+    ["Motley Fool: Why Rocket Lab stock plummeted as much as 16% today", "https://www.fool.com/investing/2026/10/15/why-rocket-lab-stock-plummeted-as-much-as-16-today/"],
+    ["Yahoo Finance: Rocket Lab stock tumbles as Neutron slips to 2027", "https://finance.yahoo.com/markets/stocks/article/rocket-lab-stock-tumbles-as-effort-to-take-market-share-from-spacex-slips-to-2027-163503484.html"],
+    ["Startup Fortune: ASML says chipmakers are already booking tools for 2029 and 2030", "https://startupfortune.com/asml-says-chipmakers-are-already-booking-tools-for-2029-and-2030/"],
+    ["ASML Q3 2026 results (SEC 6-K)", "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"],
+    ["GlobalFoundries press release (SEC 6-K)", "https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000252/gfpressreleasefinal.htm"],
+    ["Korea Times: Japan to invest up to $21 billion in two US chip factories run by GlobalFoundries", "https://www.koreatimes.co.kr/world/20261014/japan-to-invest-up-to-21-billion-in-two-us-chip-factories-to-be-run-by-globalfoundries"],
+    ["The National: GlobalFoundries, Japan and US chips", "https://www.thenationalnews.com/future/technology/2026/10/14/globlafoundries-japan-us-chips/"],
+    ["Hoodline: Raytheon's $8B nuclear terminal contract explained", "https://hoodline.com/2026/10/raytheon-wins-8-billion-nuclear-comms-deal-plus-15-million-navy-radar-order"],
+    ["RTX: $24.4 billion SM-6 contract", "https://www.rtx.com/news/news-center/2026/10/01/rtxs-raytheon-awarded-24-4-billion-multi-year-contract-for-sm-6-interceptors"],
+    ["RTX: $729 million in counter-drone contracts", "https://rtx.com/news/news-center/2026/10/13/rtxs-raytheon-awarded-729-million-in-counter-drone-contracts-for-u-s-qatar-a"],
+    ["Bloomberg Tech, 14 Oct: Nvidia bets on Europe", "https://www.bloomberg.com/news/videos/2026-10-14/bloomberg-tech-10-14-2026-video"],
+    ["ii: US earnings season Q3 2026", "https://www.ii.co.uk/investing-with-ii/international-investing/us-earnings-season"],
+    ["ONS: Consumer price inflation, UK, September 2026 (release page)", "https://www.ons.gov.uk/releases/consumerpriceinflationukseptember2026"],
+    ["MarketChameleon: Economic calendar", "https://marketchameleon.com/Economic-Calendar"]
   ]
 };
