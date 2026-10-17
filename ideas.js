@@ -256,10 +256,11 @@ window.HQ_IDEAS = {
       bear: "If US insurance volumes keep shrinking and RB Global keeps winning share, Copart is a no-growth company, and 17× earnings isn't cheap for that. ACV is a lower-margin business with integration risk. Rising cost per car is already squeezing margins. A stock that used to trade at a premium can stay re-rated lower for years.",
       watch: "US insurance unit volumes turning positive, and gross margin holding above about 42%.",
       catalysts: [
+        { d: "16 Oct 2026", e: "Update: Copart completed the ACV Auctions takeover ($10.50 per share in cash, about $1.9B equity value) after 68.4% of ACV shares were tendered by 15 Oct; ACV now runs as an independent Copart subsidiary under its own management", url: "https://www.sec.gov/Archives/edgar/data/0001637873/000119312526423456/d123963dex99a5ix.htm" },
         { d: "15 Oct 2026", e: "Update: rose 5.6% to $27.75, back above the $27.22 flagged price, in the rotation into out-of-favour stocks. No new company news", url: "https://www.gurufocus.com/news/9126710/a-look-at-copart-inc-cprt-after-56-gain-gf-value-5738-vs-price-2775" },
         { d: "13 Oct 2026", e: "Update: 52-week low (previous close $26.48, below the $27.22 flagged price); the ACV Auctions deal is still in antitrust review", url: "https://marketbeat.com/instant-alerts/price-copart-nasdaq-cprt-reaches-new-52-week-low-should-you-sell-2026-10-13" },
         { d: "~19 Nov 2026", e: "Q1 FY27 results (estimated date)", url: "https://finance.yahoo.com/markets/stocks/articles/copart-inc-cprt-q4-2026-090100470.html" },
-        { d: "By end-2026", e: "ACV Auctions acquisition closes ($10.50 per share in cash, about $1.9B; tender offer under way)", url: "https://www.insurancejournal.com/news/east/2026/09/14/884939.htm" },
+        { d: "Done 16 Oct 2026", e: "ACV Auctions acquisition closed ($10.50 per share in cash, about $1.9B)", url: "https://www.insurancejournal.com/news/east/2026/09/14/884939.htm" },
         { d: "Ongoing", e: "Insurance premiums: if premium inflation cools, more drivers keep collision cover and volumes recover", url: "https://www.investing.com/news/analyst-ratings/copart-stock-downgraded-by-hsbc-on-weak-insurance-volumes-93CH-4904840" }
       ],
       videos: [["Dying Compounder or Rare Discount? Copart Explained", "https://www.youtube.com/watch?v=Ar8QlzMhcfs"], ["Copart Stock (CPRT): Is Copart now a Buy?", "https://www.youtube.com/watch?v=2TenulJCKVQ"]],

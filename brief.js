@@ -1,82 +1,73 @@
 // Public morning brief: general market only. No portfolio, account or holdings content.
 // Written alongside the private brief.js; build_public.py publishes it as brief.js on the public site and leak-checks it first.
 window.HQ_BRIEF = {
-  date: "2026-10-16",
-  edition: "Friday 16 October 2026 · Morning edition",
-  headline: "Money rotates out of AI and into the rest of the market: the Dow jumps 1.1% while the Nasdaq barely moves, despite the biggest US producer-price jump in four and a half years",
-  dek: "US producer prices rose 1.3% in September against a 0.5% forecast, a day after a hot consumer-price figure, yet stocks held up: the Dow rose 1.08%, small caps 1.4% and the S&P 500 0.33%, while the Nasdaq finished flat after recovering from early losses. Fed Chair Kevin Warsh gave no guidance on rates overnight, and Asian chip stocks bounced. The FTSE 100 is flat this morning after closing at a five-week high, and gold has recovered to around $4,170.",
+  date: "2026-10-17",
+  edition: "Saturday 17 October 2026 · Weekend edition",
+  headline: "Chip stocks fall for an eighth straight day, the longest run since 2008, and the Nasdaq has its worst week since June as investors question how the AI build-out gets paid for",
+  dek: "The Nasdaq fell 2.1% on Friday and about 4.5% over the week; the chip index fell 3.8%, its eighth loss in a row, after CoreWeave's bonds slid deeper into distressed territory. Oil rose about 3.5% to $101 a barrel and energy led the S&P 500. The Dow held up best and finished the week higher. Gold was flat near $4,168, and the FTSE 100 edged up as investors bought defensive stocks.",
   market: [
-    { k: "S&P 500", v: "7,744.06", d: "+0.33% Thu · Dow +1.08% to 52,177.69" },
-    { k: "Nasdaq", v: "26,713.02", d: "+0.08% Thu · down about 3% this week" },
-    { k: "FTSE 100", v: "~10,830", d: "about −0.1% Fri morning · Thu close 10,840.35 (+1.08%)" },
-    { k: "Gold", v: "~$4,170/oz", d: "+1.3% Thu as the dollar slipped · higher again Fri" },
-    { k: "US producer prices", v: "6.3%", d: "Sept PPI y/y, forecast 5.3% · Oct Fed hike odds ~27–34%" }
+    { k: "S&P 500", v: "7,659.44", d: "−1.09% Fri · about −1.9% on the week" },
+    { k: "Nasdaq", v: "26,140.03", d: "−2.14% Fri · about −4.5% on the week, worst since June" },
+    { k: "FTSE 100", v: "~10,882", d: "+0.38% Fri · defensives led, banks lagged" },
+    { k: "Gold", v: "~$4,168/oz", d: "about flat Fri · about −0.5% on the week" },
+    { k: "Oil (WTI)", v: "$101.41", d: "+3.5% Fri · Brent $109.86 (+3.7%)" }
   ],
   sections: [
     {
       title: "The big picture",
       paras: [
-        "Thursday brought a second hot inflation figure: producer prices, what businesses charge each other, rose 1.3% in September and 6.3% over the year, against forecasts of 0.5% and 5.3%. Core producer prices rose 5%, the biggest gain in about four years, and retail sales rose 0.8%, well above the 0.3% forecast. Yet the market didn't repeat Wednesday's sell-off. Treasury yields fell to a three-week low and the dollar slipped about 0.5%, and investors moved money out of AI and chip stocks into consumer, defensive and smaller companies. The Dow rose 1.08% to 52,177.69, the Russell 2000 of small caps 1.38%, and the S&P 500 0.33% to 7,744.06. The Nasdaq ended up 0.08% at 26,713.02 after being down about 1.5% at its low.",
-        "Futures put roughly a 27–34% chance on a Fed rate rise on 28 October and more than 90% on one by December. Speaking in Bangkok overnight, Fed Chair Kevin Warsh described AI as a boost to productivity and gave no guidance on rates, which markets took as a relief: Japan's Nikkei rose 1.4% and Korea's Kospi 2.1% as Asian tech stocks recovered some of the week's losses. In London the FTSE 100 closed at a five-week high of 10,840.35 on Thursday and is broadly flat this morning, with banks lower on talk of higher bank taxes in the 28 October Budget. Gold rose 1.3% on Thursday to about $4,157 as yields and the dollar eased, and edged higher again overnight; oil is still around $105 a barrel on Middle East tensions."
+        "Friday was the worst day of a bad week for anything tied to AI spending. The Nasdaq fell 2.14% to 26,140.03, the S&P 500 1.09% to 7,659.44 and the Russell 2000 of small caps 1.7%, while the Dow slipped only 0.34% to 52,002.41 and still finished the week up about 0.7%. The Philadelphia Semiconductor Index fell 3.8%, its eighth straight daily loss and its longest losing streak since 2008, taking it about 15.7% below its 6 October close. The trigger was again CoreWeave, which rents out AI data-centre capacity: its shares fell about 12% after yields on its bonds rose above 15%, a sign investors doubt it can easily refinance about $52 billion of debt and lease obligations. Memory makers were also hit by worries about Chinese competition, and the VIX fear gauge touched 22.3 intraday, its highest since June.",
+        "Oil added to the pressure: US crude rose 3.5% to $101.41 and Brent 3.7% to $109.86 on Middle East supply risks, making energy the best S&P 500 sector (+2.5%), with utilities next (+1.4%). The week's hot consumer and producer price figures suggest inflation is spreading beyond energy, but futures still see roughly an 82% chance the Fed holds rates on 28 October; Fed officials are now in their pre-meeting quiet period. Gold was flat at about $4,168 and slightly lower for the week. In London the FTSE 100 rose 0.38% to about 10,882 as investors bought defensive stocks, while Lloyds fell after an RBC downgrade."
       ]
     },
     {
       title: "Stocks in the news",
       items: [
-        { t: "INTU", h: "Intuit rose 6.4% to $330.17 after agreeing to buy Sequence, an AI revenue-automation start-up.", b: "The deal adds automated billing and revenue tools to Intuit's small-business software; terms weren't disclosed in the coverage, and analysts said the payoff depends on integration and customer take-up. The shares are still down about half this year as investors worry AI will erode software pricing, which is why a bounce like this can be sharp." },
-        { t: "NKE", h: "Nike rose about 5% and Lululemon about 4% as investors rotated into beaten-down consumer names.", b: "There was no new company news: the move came from money leaving AI and tech. Consumer staples were the best sector of the week, up about 3.7%, with Coca-Cola and Kimberly-Clark also strong. Nike had fallen more than 10% after missing revenue forecasts earlier this month." },
-        { t: "RKLB", h: "Rocket Lab fell another 6.6% to $55.25 as analysts cut targets after its Neutron rocket slipped to 2027.", b: "It had been down as much as 16% during the day. KeyBanc cut its target to $100 from $135 and Goldman to $67 from $75; Cantor kept $122. The company blamed a defect in how a propellant tank dome was made and says it has been fixed. The stock is about 65% below its May high." },
-        { t: "ASML", h: "ASML says chipmakers are already booking machines for 2029 and 2030, and that 2027–28 capacity won't fully meet demand.", b: "It expects 2026 sales of €44–45 billion at about a 56% gross margin. The supply warning weighed on chip designers such as Broadcom on Thursday, since it hints at tight factory capacity for years." }
+        { t: "CRWV", h: "CoreWeave fell about 12% on Friday and about 25% over the week as its bonds traded at distressed levels.", b: "Yields on its 2031 and 2032 bonds rose above 15%, which signals that lenders want a much higher return to hold its debt. Higher yields don't change payments on existing fixed-rate bonds, but they make refinancing and new borrowing far more expensive for a company that has borrowed heavily to build data centres. CEO Mike Intrator said its backlog 'more than supports' its debt. ARK Invest bought about $13.4 million of shares on 15 October." },
+        { t: "AVGO", h: "Broadcom fell 4.5% as the chip sell-off widened beyond memory makers.", b: "Intel (−5.8%), Marvell (−5.6%), KLA (−5.0%), Lam Research (−4.9%) and Applied Materials (−4.8%) also fell sharply, while Nvidia lost only 1.4%. The iShares Semiconductor ETF (SOXX) is about 16% below its 6 October close but still up about 64% this year, so much of the year's gain remains." },
+        { t: "NFLX", h: "Netflix fell 2.9% ahead of its results on Tuesday, a day after naming Peter Rice chief content officer.", b: "Analysts expect about $0.82 a share on about $12.9 billion of revenue. Investors want evidence that slower growth is about timing rather than a trend." },
+        { t: "NEM", h: "Newmont rose 2.4% while gold was flat, ahead of its results on Thursday.", b: "It is the first big gold miner to report third-quarter results. Its results and cost figures are the first read on how much of the gold price is reaching miners' profits." }
       ]
     },
     {
       title: "Deals and catalysts worth researching",
       intro: "Deals and dated events with concrete numbers. None of these guarantees a profit: big news is often priced in within hours, and the payoff can take years.",
       items: [
-        { t: "GFS", h: "GlobalFoundries will run two new New York chip plants funded by Japan with up to $21 billion, and the US will take a 4% stake.", b: "Japan provides the money under its $550 billion US investment pledge; GlobalFoundries earns fees for building, running and licensing technology to the plants. The first, about $10 billion, is due online in 2029. US government ownership rises to about 7%. The shares rose about 5% on the news on Wednesday." },
-        { t: "RTX", h: "Raytheon won a sole-source US Air Force contract worth up to $8 billion to modernise nuclear command communications, running to about 2036.", b: "The figure is a ceiling, not committed money: only $800,000 has been obligated so far. It follows a $24.4 billion multi-year SM-6 interceptor contract on 1 October and $729 million of counter-drone awards on 13 October." },
-        { t: "NVDA", h: "Nvidia's Jensen Huang announced plans to invest another $2 billion in European AI deals, including four French start-ups.", b: "The named companies are Doctolib, Genesis AI, Pigment and Entalpic. Investments like this tend to deepen demand for Nvidia's own chips. Deal sizes for each start-up weren't given in the coverage." }
+        { t: "VRNS", h: "Proofpoint, owned by Thoma Bravo, agreed to buy data-security company Varonis for $49.75 a share in cash, about $6.3 billion.", b: "The price is 17% above Varonis's 1 September close, but the shares rose only about 2–3% after the announcement because takeover talk had been reported since June. It's a clean example of a deal being priced in before it was announced. Closing is expected in the first half of 2027." },
+        { t: "LRCX", h: "Lam Research and Texas Instruments report on Wednesday, after the chip index's longest losing streak since 2008.", b: "Their outlooks will show whether chipmakers are slowing equipment orders, or whether ASML's comment that customers are already booking machines for 2029–30 holds up." },
+        { t: "RTX", h: "RTX, Northrop Grumman and GE Aerospace report on Tuesday, after a run of large defence contracts.", b: "RTX won a $24.4 billion SM-6 missile contract on 1 October and an Air Force nuclear communications contract worth up to $8 billion on 13 October (only $800,000 obligated so far). Tuesday's results show how much of that backlog is turning into revenue." }
       ]
     }
   ],
   calendar: [
-    { d: "Fri 16 Oct", e: "US industrial production · Travelers, Truist, Regions, M&T, Citizens results · Apple foldable pre-orders open" },
-    { d: "Mon 19 Oct", e: "China Q3 GDP · Texas Instruments results (expected, after US close)" },
-    { d: "Tue 20 Oct", e: "US housing starts · Netflix and United Airlines results (after US close) · GE Aerospace this week" },
-    { d: "Wed 21 Oct", e: "UK September inflation (7am; August was 3.1%) · Tesla results expected (date not confirmed) · IBM, Lam Research" },
-    { d: "Thu 22 Oct", e: "US jobless claims · Intuitive Surgical, Abbott this week" },
-    { d: "Later", e: "US flash PMIs 23 Oct · Fed decision 28 Oct · UK Budget 28 Oct · AMD results 3 Nov · US midterms 3 Nov · Bank of England 5 Nov" }
+    { d: "Mon 19 Oct", e: "US homebuilder sentiment · Fifth Third and Zions results · China Q3 GDP" },
+    { d: "Tue 20 Oct", e: "RTX, Northrop Grumman, GE Aerospace, General Motors results · US housing starts · Netflix (after US close)" },
+    { d: "Wed 21 Oct", e: "UK September inflation (7am; August was 3.1%) · Tesla, Meta, IBM, Texas Instruments, Lam Research, SAP (after US close)" },
+    { d: "Thu 22 Oct", e: "US jobless claims · Newmont, Western Digital, Lockheed Martin, Procter & Gamble, Blackstone results" },
+    { d: "Fri 23 Oct", e: "US flash PMIs · University of Michigan sentiment (final) · American Express, SLB results" },
+    { d: "Later", e: "Fed decision 28 Oct · UK Budget 28 Oct · Intel results 29 Oct · US midterms 3 Nov · Bank of England 5 Nov" }
   ],
-  bottomLine: "Two hot inflation figures in two days didn't sink the market; they moved it. Money is leaving the most expensive AI names for consumer, defensive and smaller companies, and with a Fed rise now a live possibility for 28 October, next week's UK inflation figure and the first big tech results (Netflix, Tesla) will show whether that rotation continues.",
+  bottomLine: "The market spent this week asking who pays for the AI build-out, and the answer so far has hit chipmakers and heavily borrowed data-centre operators hardest while energy, utilities and the Dow held up. Next week's results from Lam Research, Texas Instruments, Tesla and Meta are the first hard data on whether AI spending is slowing.",
   sources: [
-    ["TheStreet: Stock market today, Oct. 15, 2026", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026"],
-    ["TS2: Dow jumps 1.1%, Russell 2000 rises 1.4% as broad rotation beats tech", "https://ts2.tech/en/dow-jumps-1-1-russell-2000-rises-1-4-as-broad-rotation-beats-tech/"],
-    ["Pomegra: Dow gains 1% as money leaves AI trade", "https://pomegra.io/news/stock-market-today-dow-gains-1-as-money-leaves-ai-trade"],
-    ["Schwab: Stocks slip early after wholesale inflation surges", "https://www.schwab.com/learn/story/stock-market-update-open"],
-    ["CNBC: Gold rebounds on weaker dollar, yields; October Fed hike bets subdued", "https://www.cnbc.com/2026/10/15/gold-rebounds-from-one-week-low-as-dollar-slips.html"],
-    ["Forbes: Gold rebounds as Treasury yields and dollar fall", "https://www.forbes.com/sites/conormurray/2026/10/15/gold-rebounds-from-steep-losses-as-treasury-yields-and-us-dollar-fall/"],
-    ["Swissinfo/Bloomberg: Asian stocks rise, US futures gain after Warsh", "https://www.swissinfo.ch/eng/asian-stocks-rise,-us-futures-gain-after-warsh:-markets-wrap/92225060"],
-    ["FXStreet: Warsh gives little away despite hotter inflation prints", "https://www.fxstreet.com/analysis/warsh-gives-little-away-despite-hotter-inflation-prints-202610160600"],
-    ["Asia Business Daily: Warsh remarks lift Nasdaq futures; Asian stocks rally", "https://www.asiae.co.kr/en/article/world-stockmarket/2026101614305673083"],
-    ["Trading Economics: UK stock market", "https://tradingeconomics.com/united-kingdom/stock-market"],
-    ["Yahoo Finance UK: Markets live, FTSE 100", "https://uk.finance.yahoo.com/news/markets-live-ftse-100-set-060300466.html"],
-    ["CNBC: Friday's big stock stories", "https://www.cnbc.com/2026/10/15/fridays-big-stock-stories-whats-likely-to-move-the-market.html"],
-    ["Benzinga: Intuit bets on AI revenue automation with Sequence acquisition", "https://www.benzinga.com/m-a/26/10/62391226/intuit-bets-on-ai-powered-revenue-automation-with-sequence-acquisition"],
-    ["GuruFocus: Intuit after 6.4% gain", "https://www.gurufocus.com/news/9126573/a-look-at-intuit-inc-intu-after-64-gain-gf-value-83199-vs-price-33017"],
-    ["24/7 Wall St.: Nike climbs 5% as beaten-down consumer names catch a bid", "https://247wallst.com/investing/2026/10/15/nike-climbs-5-as-beaten-down-consumer-names-catch-a-bid-lululemon-rises-4-on-holding-dips/"],
-    ["Motley Fool: Why Rocket Lab stock plummeted as much as 16% today", "https://www.fool.com/investing/2026/10/15/why-rocket-lab-stock-plummeted-as-much-as-16-today/"],
-    ["Yahoo Finance: Rocket Lab stock tumbles as Neutron slips to 2027", "https://finance.yahoo.com/markets/stocks/article/rocket-lab-stock-tumbles-as-effort-to-take-market-share-from-spacex-slips-to-2027-163503484.html"],
-    ["Startup Fortune: ASML says chipmakers are already booking tools for 2029 and 2030", "https://startupfortune.com/asml-says-chipmakers-are-already-booking-tools-for-2029-and-2030/"],
-    ["ASML Q3 2026 results (SEC 6-K)", "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"],
-    ["GlobalFoundries press release (SEC 6-K)", "https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000252/gfpressreleasefinal.htm"],
-    ["Korea Times: Japan to invest up to $21 billion in two US chip factories run by GlobalFoundries", "https://www.koreatimes.co.kr/world/20261014/japan-to-invest-up-to-21-billion-in-two-us-chip-factories-to-be-run-by-globalfoundries"],
-    ["The National: GlobalFoundries, Japan and US chips", "https://www.thenationalnews.com/future/technology/2026/10/14/globlafoundries-japan-us-chips/"],
-    ["Hoodline: Raytheon's $8B nuclear terminal contract explained", "https://hoodline.com/2026/10/raytheon-wins-8-billion-nuclear-comms-deal-plus-15-million-navy-radar-order"],
+    ["ABC News/AP: How major US stock indexes fared Friday 10/16/2026", "https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-friday-10162026-137331951"],
+    ["Yoopya: Why Wall Street fell, and what investors are watching before Monday", "https://www.yoopya.com/business/markets/wall-street-today-october-17-2026"],
+    ["CNBC: Nasdaq slides 2% Friday to post worst week since June", "https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html"],
+    ["24/7 Wall St: Chip stocks just fell 8 days in a row", "https://247wallst.com/investing/2026/10/17/chip-stocks-just-fell-8-days-in-a-row-their-longest-losing-streak-since-2008/"],
+    ["BigGo Finance: Nasdaq tumbles 2.15%, chip index plunges 3.83%", "https://finance.biggo.com/news/4653f52e-d964-4a23-90e0-9b2091a94646"],
+    ["Motley Fool: Why is CoreWeave stock falling today?", "https://www.fool.com/investing/2026/10/16/why-is-coreweave-stock-falling-today/"],
+    ["CNBC: CoreWeave shares tumble as bond yields near 15%", "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html"],
+    ["TipRanks: Cathie Wood buys CoreWeave and Rocket Lab", "https://www.tipranks.com/news/crwv-rklb-or-pltr-cathie-wood-buys-22-7m-in-two-stocks-sells-one"],
+    ["Cardano Capital: Nasdaq falls 4.5% in its worst week since June as the VIX hits 22", "https://cardanocapital.substack.com/p/nasdaq-falls-45-in-its-worst-week"],
+    ["Rio Times: Gold and silver, Friday 16 October 2026", "https://www.riotimesonline.com/gold-silver-precious-metals-friday-october-16-2026/"],
+    ["CNBC: Gold set for a weekly drop as traders assess Fed signals", "https://www.cnbc.com/2026/10/16/gold-gains-on-softer-dollar-but-heads-for-weekly-fall.html"],
+    ["Sharecast: London close, FTSE in the black as investors snap up defensive stocks", "https://www.sharecast.com/news/market-report-close/ftse-100-london-close-market-shares-lloyds-natwest-babcock--23873442.html"],
+    ["Proofpoint: Proofpoint to acquire Varonis in a $6.3 billion transaction", "https://www.proofpoint.com/us/newsroom/press-releases/proofpoint-acquire-varonis-creating-global-leader-data-and-ai-security"],
+    ["KSL/Reuters: Thoma Bravo's Proofpoint to buy Varonis", "https://www.ksl.com/article/51636970/thoma-bravos-proofpoint-to-buy-varonis-systems-in-63-billion-all-cash-deal"],
     ["RTX: $24.4 billion SM-6 contract", "https://www.rtx.com/news/news-center/2026/10/01/rtxs-raytheon-awarded-24-4-billion-multi-year-contract-for-sm-6-interceptors"],
-    ["RTX: $729 million in counter-drone contracts", "https://rtx.com/news/news-center/2026/10/13/rtxs-raytheon-awarded-729-million-in-counter-drone-contracts-for-u-s-qatar-a"],
-    ["Bloomberg Tech, 14 Oct: Nvidia bets on Europe", "https://www.bloomberg.com/news/videos/2026-10-14/bloomberg-tech-10-14-2026-video"],
-    ["ii: US earnings season Q3 2026", "https://www.ii.co.uk/investing-with-ii/international-investing/us-earnings-season"],
-    ["ONS: Consumer price inflation, UK, September 2026 (release page)", "https://www.ons.gov.uk/releases/consumerpriceinflationukseptember2026"],
-    ["MarketChameleon: Economic calendar", "https://marketchameleon.com/Economic-Calendar"]
+    ["Defence Blog: Raytheon wins $8B deal for nuclear command terminals", "https://defence-blog.com/raytheon-wins-8b-deal-for-nuclear-command-terminals/"],
+    ["Opening Bell Daily: Stock market week ahead, 19 October", "https://www.openingbelldailynews.com/p/stock-market-week-ahead-oct-19-2026"],
+    ["CNBC: Major earnings reports are due next week", "https://www.cnbc.com/2026/10/16/major-earnings-reports-market-fears-next-week.html"],
+    ["Kiplinger: Earnings calendar, 19–23 October", "https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks"],
+    ["ONS: Consumer price inflation, UK, September 2026 (release page)", "https://www.ons.gov.uk/releases/consumerpriceinflationukseptember2026"]
   ]
 };
