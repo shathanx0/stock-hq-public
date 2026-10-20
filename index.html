@@ -228,6 +228,9 @@ select.pick { padding: 6px 10px; border-radius: 8px; border: 1px solid var(--hai
 .bitem { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
 .bitem .tk { align-self: start; justify-self: start; }
 .bitem h4 { margin: 0 0 2px; font-size: 14.5px; }
+.bitem h4 a { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+.bitem h4 a:hover { text-decoration-color: currentColor; }
+.tag.imp { color: var(--ink); font-weight: 600; margin-right: 6px; vertical-align: 1px; }
 .bitem p { margin: 0; font-size: 13.5px; color: var(--ink-2); max-width: 72ch; }
 .bitem .live { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 3px; }
 .cal { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
@@ -1645,7 +1648,8 @@ function renderTakeaways() {
 function renderBrief() {
   const B = window.HQ_BRIEF;
   const live = t => T[t] ? `<div class="live">${money(t, T[t].price)} · <span class="${cls(ret1W(t))}">${pct(ret1W(t))} 1W</span>${hq(t) ? ` · HQ Score ${hq(t).total}` : ""}</div>` : "";
-  const item = it => `<div class="bitem">${it.t ? (T[it.t] ? tkChip(it.t) : `<span class="tk">${esc(it.t)}</span>`) : "<span></span>"}<div><h4>${esc(it.h)}</h4><p>${esc(it.b)}</p>${it.t ? live(it.t) : ""}</div></div>`;
+  // it.imp marks news that matters most; it.u links the headline (used by "Worth reading").
+  const item = it => `<div class="bitem">${it.t ? (T[it.t] ? tkChip(it.t) : `<span class="tk">${esc(it.t)}</span>`) : "<span></span>"}<div><h4>${it.imp ? `<span class="tag imp">Important</span>` : ""}${it.u ? `<a href="${esc(it.u)}" target="_blank" rel="noopener">${esc(it.h)}</a>` : esc(it.h)}</h4><p>${esc(it.b)}</p>${it.t ? live(it.t) : ""}</div></div>`;
   $("#paper").innerHTML = !B ? `<p class="empty">No brief yet. Ask Claude for today's morning brief.</p>` : `
     <div class="ed"><span>STOCK RESEARCH HQ · MORNING BRIEF</span><span>${esc(B.edition)}</span></div>
     <h2 class="hl">${esc(B.headline)}</h2><p class="dek">${esc(B.dek)}</p>
