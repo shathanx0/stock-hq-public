@@ -1,74 +1,73 @@
 // Public morning brief: general market only. No portfolio, account or holdings content.
 // Written alongside the private brief.js; build_public.py publishes it as brief.js on the public site and leak-checks it first.
 window.HQ_BRIEF = {
-  date: "2026-10-20",
-  edition: "Tuesday 20 October 2026 · Morning edition",
-  headline: "Chips ended their eight-day slide on a narrow Wall Street rebound, but Korea's chip stocks fell again overnight as bond yields rose",
-  dek: "The Nasdaq rose 1.1% and the chip index 1.6% on Monday, led by Amazon and memory makers, yet nearly two-thirds of S&P 500 stocks fell as the 10-year Treasury yield climbed to 5.15%. Korea's Kospi dropped about 3–4% on Tuesday. RTX, GE Aerospace, Netflix and SpaceX all report today.",
+  date: "2026-10-21",
+  edition: "Wednesday 21 October 2026 · Morning edition",
+  headline: "UK inflation jumped to 3.5%, making a Bank of England rate rise in November look close to certain, while SpaceX's first profit as a public company lifted it after hours",
+  dek: "On Tuesday the Dow rose 1% and small caps 1.7% while the Nasdaq went nowhere, as investors moved out of big tech and into health care and property. Netflix fell about 6% after hours on a weak outlook. This morning UK inflation came in above forecast, driven by petrol prices.",
   market: [
-    { k: "S&P 500", v: "7,690.73", d: "Mon close +0.41% · most stocks fell" },
-    { k: "Nasdaq", v: "26,430.89", d: "Mon close +1.11% · chip index +1.61%" },
-    { k: "FTSE 100", v: "10,764.69", d: "Mon close −1.1% · called about 49 pts lower Tue" },
-    { k: "Gold", v: "~$4,122/oz", d: "Dec futures −0.5% Mon on firmer dollar and yields" },
-    { k: "US 10-year", v: "5.15%", d: "+6 bp Mon · Brent above $110 Tue morning" }
+    { k: "S&P 500", v: "7,712.57", d: "Tue close +0.28% · equal-weight +1.15%" },
+    { k: "Nasdaq", v: "26,424.82", d: "Tue close −0.02% · chip index −0.29%" },
+    { k: "FTSE 100", v: "~10,733", d: "Tue close −0.3% · opened lower after UK CPI" },
+    { k: "Gold", v: "~$4,143/oz", d: "Dec futures −0.4% Tue · about $4,138 Wed" },
+    { k: "UK inflation", v: "3.5%", d: "Sept CPI, up from 3.1% · forecast 3.4%" }
   ],
   sections: [
     {
       title: "The big picture",
       paras: [
-        "Monday's rebound was narrow. The Nasdaq gained 1.1% and the Philadelphia chip index 1.6%, ending its longest losing streak since 2008, but the chip index gave back more than half of an earlier 3.7% gain, and nearly two-thirds of S&P 500 stocks fell. Amazon (+5%) did a lot of the lifting after Morgan Stanley named it a top pick. The 10-year Treasury yield rose 6 basis points to 5.15%, which hit rate-sensitive sectors: utilities fell 2.0%, real estate 1.2% and financials 0.8%.",
-        "Asia didn't follow the US bounce. Korea's Kospi fell about 3–4% on Tuesday, with SK Hynix down about 4–5% and Samsung about 1.5–2%, as doubts about the returns on AI spending returned and Korean bond yields rose. In London the FTSE 100 fell 1.1% on Monday after its best week in six months, with Barclays down 3.5% and Anglo American about 4%, and it was called lower again. Brent is above $110 after Houthi attacks on Saudi energy sites, while gold slipped to about $4,122 as the dollar and yields firmed."
+        "Tuesday was a rotation day on Wall Street. The Dow gained 1.0% to 52,496, led by 3M, and the Russell 2000 of smaller companies rose 1.7%, but the Nasdaq slipped 0.02% as big tech lagged and the chip index fell 0.3%. The average stock did better than the giants: the equal-weighted S&P 500 rose 1.15%. Health care (+2.4%) and real estate (+1.7%) led, and technology was the only sector down. The 10-year Treasury yield eased 3 basis points to 5.12% after weak housing data.",
+        "This morning's UK numbers were hotter than expected. Consumer prices rose 3.5% in the year to September, up from 3.1% and above the 3.4% forecast, mostly because motor fuel cost nearly 30% more than a year ago. Markets had already priced a Bank of England rate rise on 5 November as very likely, and the data reinforces that. Government borrowing of £24.5 billion also beat forecasts a week before the Budget. In the US, futures show about an 85% chance the Fed holds rates at 3.75–4.00% on 28 October. Brent crude is back around $110, and gold is steady near $4,140."
       ]
     },
     {
       title: "Stocks in the news",
       items: [
-        { t: "AMZN", h: "Amazon rose about 5% after Morgan Stanley named it a top pick and raised its target to $350 from $335.", b: "The bank argued that the growth runway for AWS, Amazon's cloud business, is under-appreciated. It was the biggest single lift to the S&P 500 on a day when most stocks fell." },
-        { t: "CLF", h: "Cleveland-Cliffs jumped 16% after beating forecasts and guiding to more than $4 billion of profit in 2027.", b: "Adjusted earnings were $0.28 a share against $0.21 expected, and third-quarter adjusted EBITDA of $612 million beat its own $575 million guidance. Volume was more than four times normal." },
-        { t: "BARC", h: "Barclays fell 3.5%, the biggest bank faller in London, after a report that the Bank of England's regulator is examining its traders.", b: "The Financial Times reported the regulator is looking at how the bank classified some derivatives. Barclays hasn't announced any action, but the report helped pull the FTSE 100 down 1.1%." },
-        { t: "MU", h: "Micron rose 3% with the memory rebound, but a union at its Taiwan site plans to strike on Thursday.", b: "Western Digital (+6%) and Sandisk (+5.5%) led the chip bounce. Micron's Taoyuan union says 99% of voting members backed a strike over bonuses; it wants 15% of operating profit shared with staff. There's no word yet on any effect on production." }
+        { t: "SPCX", imp: true, h: "SpaceX made its first operating profit as a public company, and the shares rose about 5% after hours.", b: "Third-quarter revenue rose 161% to $14.6 billion, well above the roughly $12.9 billion expected, and net income was $4.4 billion. The AI computing business, which leases capacity to other AI companies, brought in $7.56 billion, more than Starlink's $5.25 billion. The catch is spending: $19.6 billion of capital spending in the quarter and $35–40 billion planned for the fourth, with no full-year forecast. Starlink added 1.6 million subscribers, short of the 2.3 million expected." },
+        { t: "NFLX", imp: true, h: "Netflix beat on profit but fell about 6% after hours on a weaker outlook and a cut to its ad forecast.", b: "Earnings were $0.87 a share against $0.82 expected, on revenue of $12.87 billion, up 12%. It guided to about $13.44 billion of fourth-quarter revenue, a little under the $13.51 billion consensus, and cut its 2026 advertising revenue forecast to about $2.7 billion from $3 billion. The shares were already down about 25% this year." },
+        { t: "MMM", h: "3M rose 5.8%, leading the Dow, after expanding its data-centre deal with Amazon.", b: "Amazon received warrants for about 3.16 million 3M shares at $164.89, most of which vest only as Amazon buys up to $6 billion of 3M's optical connectivity and other data-centre products. It's a sign that old-economy industrial firms are finding a way into AI spending." },
+        { t: "GM", h: "General Motors fell 6.8% despite beating forecasts and announcing a new $20 billion buyback.", b: "Investors focused on rising commodity costs instead. Northrop Grumman (+4.6%) beat on earnings, while GE Aerospace fell 3.7% as free cash flow dropped 14%, even though orders rose 49%." }
       ]
     },
     {
       title: "Deals and catalysts worth researching",
-      intro: "Deals and dated events with concrete numbers. None of these guarantees a profit: big news is often priced in within hours, and the payoff can take years.",
+      intro: "Deals with concrete numbers. Big news is often priced in within hours, and the payoff from any deal can take years, so none of this guarantees a profit.",
       items: [
-        { t: "SLN", h: "Merck KGaA agreed to buy Silence Therapeutics for $20 a share in cash, about $1.3 billion.", b: "That's a 130% premium to Friday's close, and the shares jumped 126% on Monday, so almost all of it was priced in within a day. The prize is divesiran, a blood-disorder drug heading into Phase 3. Closing is expected in the first quarter of 2027." },
-        { t: "LEU", h: "Centrus Energy bought Westerman, its main centrifuge-casing supplier, for about $116 million.", b: "It paid about $95 million in cash and $21 million in shares. Centrus says making the parts in-house should cut costs for its multibillion-dollar US enrichment expansion, with first new capacity at Piketon, Ohio expected by 2029." },
-        { t: "SPCX", h: "SpaceX reports third-quarter results today after the US close, with a webcast at 4:30pm New York time.", b: "Its first report as a public company in August showed revenue of $7.8 billion (up 92%) and a $541 million net loss, and the shares fell after hours on heavy AI spending. Spending plans will matter as much as revenue." }
+        { t: "BRZE", h: "Salesforce agreed to buy Braze for $47.50 a share in cash, about $5.7 billion including debt and cash.", b: "Braze makes customer-messaging software that Salesforce plans to plug into its AI agents. Braze jumped 52% on Tuesday, so nearly all the premium was priced in on day one, and rival Klaviyo rose 12% on hopes of more deals in marketing software." },
+        { t: "MMM", h: "3M's Amazon warrant fully vests at $6 billion of cumulative Amazon purchases.", b: "About 85% of the warrant vests as Amazon buys data-centre products, with the rest tied to milestones. 3M is also buying about 4.7% of Taiwan's Genius Electronic Optical to develop optical parts. The deal gives a concrete number to track in future 3M results." },
+        { t: "SPCX", h: "SpaceX's backlog is $63 billion, but it plans $35–40 billion of capital spending next quarter.", b: "The quarter showed how fast AI computing revenue is growing, from $2.56 billion in the second quarter to $7.56 billion. Whether that spending earns its return is the question for the whole space and AI-infrastructure trade." }
       ]
     },
     {
       title: "Worth reading",
       items: [
-        { h: "Palantir, Datadog and chip stocks bounce back as Amazon lifts Wall Street", u: "https://www.aol.com/articles/palantir-datadog-chip-stocks-bounce-204043000.html", b: "Monday's session in one read, including how narrow the rally was underneath the index gains. Yahoo Finance via AOL, 19 Oct." },
-        { h: "Korea's Stock Slide Put AI Chip Bets Under Scrutiny", u: "https://finimize.com/content/koreas-stock-slide-put-ai-chip-bets-under-scrutiny", b: "A short explainer of why rising bond yields hit AI chip stocks harder than steadier businesses. Finimize, 20 Oct (free, needs a sign-in)." },
-        { t: "LEU", h: "Centrus Announces $116 Million Acquisition Of Centrifuge Component Supplier Westerman", u: "https://www.nucnet.org/news/centrus-announces-usd116-million-acquisition-of-centrifuge-component-supplier-westerman-10-1-2026", b: "A clear look at how the US is rebuilding its uranium enrichment supply chain. NucNet, 19 Oct." }
+        { t: "SPCX", h: "SpaceX posts first operating profit as public company as AI revenue nearly triples to $7.6 billion", u: "https://fortune.com/2026/10/20/spacex-q3-profit-ai-si-elon-musk/", b: "The clearest breakdown of SpaceX's three businesses and the spending and debt that come with them. Fortune, 20 Oct." },
+        { t: "NFLX", h: "Netflix stock sinks after announcing Q3 earnings, Q4 revenue forecast falls short of estimates", u: "https://finance.yahoo.com/markets/stocks/article/netflix-stock-sinks-after-announcing-q3-earnings-q4-revenue-forecast-falls-short-of-estimates-204545261.html", b: "A short read on why a profit beat still sent the shares lower: guidance and advertising. Yahoo Finance, 20 Oct." },
+        { h: "UK inflation picks up more than expected to 3.5% in September", u: "https://www.investing.com/news/economy-news/uk-inflation-picks-up-more-than-expected-to-35-in-september-4961639", b: "The Reuters report on this morning's figures and what they mean for a November rate rise. Reuters via Investing.com, 21 Oct." }
       ]
     }
   ],
   calendar: [
-    { d: "Tue 20 Oct", e: "UK jobs data (7am) · US housing starts · RTX, GE Aerospace, Northrop Grumman, GM, 3M results · Netflix, Intuitive Surgical and SpaceX (after US close)" },
-    { d: "Wed 21 Oct", e: "UK September inflation (7am; August was 3.1%) · Lam Research, Texas Instruments, Tesla, Meta, IBM, SAP (after US close)" },
+    { d: "Wed 21 Oct", e: "UK inflation 3.5% (out) · US crude stocks · Abbott, NextEra, AT&T (before US open) · Tesla, Meta, IBM, Lam Research, Texas Instruments, SAP (after US close)" },
     { d: "Thu 22 Oct", e: "US jobless claims · Newmont, Western Digital, Lockheed Martin results · Rentokil trading update" },
     { d: "Fri 23 Oct", e: "US flash PMIs · University of Michigan sentiment (final) · American Express, SLB results" },
-    { d: "Later", e: "Fed decision 28 Oct · UK Budget 28 Oct · Intel results 29 Oct · US midterms 3 Nov · Bank of England 5 Nov" }
+    { d: "Mon 26 Oct", e: "Quiet start to a heavy week" },
+    { d: "Tue 27 Oct", e: "Fed's two-day meeting begins" },
+    { d: "Later", e: "Fed decision and UK Budget 28 Oct · Intel 29 Oct · US midterms 3 Nov · Bank of England 5 Nov" }
   ],
-  bottomLine: "Monday's chip bounce was real but thin, and rising bond yields are now the bigger test for AI stocks. Wednesday's Lam Research, Texas Instruments, Tesla and Meta results are the first hard answers this week.",
+  bottomLine: "UK inflation at 3.5% all but locks in a Bank of England rate rise on 5 November, and with US yields above 5% and oil near $110, rates rather than earnings are still setting the mood. Tonight's Tesla, Meta and Lam Research results are the next test for big tech.",
   sources: [
-    ["CappNotes: Closing Look, Monday 19 October 2026", "https://cappnotes.substack.com/p/closing-look-monday-october-19-2026"],
-    ["CNT Trading: Amazon leads a tech rebound, but most stocks fall as yields climb (19 Oct)", "https://cnttrading.substack.com/p/daily-market-2026-10-19"],
-    ["Yahoo Finance via AOL: Palantir, Datadog and chip stocks bounce back as Amazon lifts Wall Street", "https://www.aol.com/articles/palantir-datadog-chip-stocks-bounce-204043000.html"],
-    ["Proactive Investors: Markets live, Nasdaq powers ahead, FTSE closes red (19 Oct)", "https://www.proactiveinvestors.com/companies/news/1100279/markets-live-nasdaq-powers-ahead-as-tech-stocks-rebound-ftse-closes-red-1100279.html"],
-    ["Proactive Investors: London set to extend losses as Asian technology rout deepens (20 Oct)", "https://www.proactiveinvestors.com/companies/news/1100357/markets-live-london-set-to-extend-losses-as-asian-technology-rout-deepens-1100357.html"],
-    ["Seoul Economic Daily: KOSPI slides more than 2% despite US chip rebound", "https://en.sedaily.com/finance/2026/10/20/kospi-slides-more-than-2-percent-despite-us-chip-rebound"],
-    ["Finimize: Korea's stock slide put AI chip bets under scrutiny", "https://finimize.com/content/koreas-stock-slide-put-ai-chip-bets-under-scrutiny"],
-    ["TipRanks: Micron Taiwan union plans strike as bonus dispute deepens", "https://www.tipranks.com/news/micron-stock-news-taiwan-union-plans-strike-as-bonus-dispute-deepens"],
-    ["Silicon UK: Micron Taiwan strike", "https://www.silicon.co.uk/cloud/ai/micron-taiwan-strike-631814"],
-    ["NucNet: Centrus announces $116 million acquisition of Westerman", "https://www.nucnet.org/news/centrus-announces-usd116-million-acquisition-of-centrifuge-component-supplier-westerman-10-1-2026"],
-    ["SEC: Silence Therapeutics DEFA14A (Merck KGaA deal)", "https://www.sec.gov/Archives/edgar/data/0001479615/000119312526425238/d189864dex999.htm"],
-    ["SpaceX IR: Q3 2026 results and webcast on 20 October", "https://ir.spacex.com/updates/releases-details/2026/SpaceX-to-Post-Third-Quarter-2026-Results-and-Host-Webcast-on-October-20-2026-2026-QssQGye3im/default.aspx"],
-    ["CBS News: SpaceX's first earnings report since going public", "https://www.cbsnews.com/news/spacex-earnings-elon-musk-ipo/"],
-    ["ONS: Consumer price inflation, UK, September 2026 (release page)", "https://www.ons.gov.uk/releases/consumerpriceinflationukseptember2026"]
+    ["CappNotes: Closing Look, Tuesday 20 October 2026", "https://cappnotes.substack.com/p/closing-look-tuesday-october-20-2026"],
+    ["CNBC: Stock market news for 20 October 2026", "https://www.cnbc.com/2026/10/19/stock-market-today-live-updates.html"],
+    ["Proactive Investors: FTSE 100 set to edge higher before UK inflation test (21 Oct)", "https://www.proactiveinvestors.com/companies/news/1100440/markets-live-ftse-100-set-to-edge-higher-before-uk-inflation-test-1100440.html"],
+    ["Reuters via Investing.com: UK inflation picks up more than expected to 3.5% in September", "https://www.investing.com/news/economy-news/uk-inflation-picks-up-more-than-expected-to-35-in-september-4961639"],
+    ["FXStreet: UK CPI climbs to 3.5% vs 3.4% expected", "https://www.fxstreet.com/news/uk-cpi-set-to-accelerate-paving-the-way-for-a-boe-interest-rate-hike-in-november-202610210200"],
+    ["investingLive: BoE November rate hike almost fully priced in", "https://investinglive.com/news/heads-up-uk-september-cpi-inflation-report-due-today-boe-rate-hike-for-november-almost-fully-priced-in/"],
+    ["Investing.com: Fed rate monitor tool", "https://www.investing.com/central-banks/fed-rate-monitor"],
+    ["Fortune: SpaceX posts first operating profit as a public company", "https://fortune.com/2026/10/20/spacex-q3-profit-ai-si-elon-musk/"],
+    ["Tesla North: SpaceX Q3 2026 results", "https://teslanorth.com/2026/10/20/spacex-q3-2026-results/"],
+    ["Yahoo Finance: Netflix stock sinks after Q3 earnings", "https://finance.yahoo.com/markets/stocks/article/netflix-stock-sinks-after-announcing-q3-earnings-q4-revenue-forecast-falls-short-of-estimates-204545261.html"],
+    ["SEC: Braze 8-K (Salesforce merger)", "https://www.sec.gov/Archives/edgar/data/0001676238/000095010326015850/dp254600_ex9902.htm"],
+    ["WHTC/Reuters: 3M expands Amazon data-centre partnership", "https://whtc.com/2026/10/19/3m-expands-amazon-data-center-partnership-shares-gain/"]
   ]
 };
